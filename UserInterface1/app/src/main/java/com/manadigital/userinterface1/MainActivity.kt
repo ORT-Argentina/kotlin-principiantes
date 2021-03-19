@@ -1,11 +1,15 @@
 package com.manadigital.userinterface1
 
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +32,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         swMain.setOnCheckedChangeListener { buttonView, isChecked ->
-            Toast.makeText(this, isChecked.toString(),Toast.LENGTH_SHORT).show();
+            val release = Build.VERSION.RELEASE
+            val sdkVersion = Build.VERSION.SDK_INT
+
+            if( sdkVersion >= 29 ) {
+                val parentLayout: View = findViewById(android.R.id.content)
+                val snackbar = Snackbar.make(parentLayout, isChecked.toString(), Snackbar.LENGTH_SHORT)
+                snackbar.show()
+            }else{
+                Toast.makeText(this, sdkVersion.toString(), Toast.LENGTH_SHORT).show();
+            }
         }
 
     }
