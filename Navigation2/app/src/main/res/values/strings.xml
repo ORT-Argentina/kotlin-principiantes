@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Navigation1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_main_title">Control de Acceso</string>
+    <string name="login_btn_login">Ingresar</string>
+</resources>
