@@ -34,7 +34,9 @@ class Fragment2 : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        user = Fragment2Args.fromBundle(requireArguments()).user1
+        user = Fragment2Args.fromBundle(requireArguments()).user
+
+        var usuario = Fragment2Args.fromBundle(requireArguments()).usuario
 
         lblNombre.text = user.email
 

@@ -49,7 +49,7 @@ class Fragment1 : Fragment() {
                 user.email.toUpperCase() == "ADMIN"
                 && user.password.toUpperCase() == "ADMIN" ) {
 
-                val action = Fragment1Directions.actionFragment1ToFragment2(user)
+                val action = Fragment1Directions.actionFragment1ToFragment2(user, user.email)
 
                 v.findNavController().navigate(action)
             }else{

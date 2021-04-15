@@ -20,7 +20,10 @@
         android:label="fragment_fragment2"
         tools:layout="@layout/fragment_fragment2" >
         <argument
-            android:name="user1"
+            android:name="user"
             app:argType="com.manadigital.navigation2.fragments.Entities.User" />
+        <argument
+            android:name="usuario"
+            app:argType="string" />
     </fragment>
 </navigation>
