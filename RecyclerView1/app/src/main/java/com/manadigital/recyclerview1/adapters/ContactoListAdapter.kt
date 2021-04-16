@@ -1,10 +1,7 @@
 package com.manadigital.recyclerview1.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.manadigital.recyclerview1.R
 import com.manadigital.recyclerview1.entities.Contacto
@@ -17,14 +14,14 @@ class ContactoListAdapter(
 ) : RecyclerView.Adapter<ContactoHolder>() {
 //class MascotaListAdapter (private var mascotasList: MutableList<Mascota>) : RecyclerView.Adapter<MascotaListAdapter.MascotaHolder>() {
 
-    companion object {
-
-        private val TAG = "ContactoListAdapter"
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactoHolder {
         val view =  LayoutInflater.from(parent.context).inflate(R.layout.item_contactos,parent,false)
         return (ContactoHolder(view))
+    }
+
+    companion object {
+
+        private val TAG = "ContactoListAdapter"
     }
 
     override fun getItemCount(): Int {
