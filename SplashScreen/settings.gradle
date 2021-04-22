@@ -1,0 +1,2 @@
+rootProject.name='SplashScreen'
+include ':app'
