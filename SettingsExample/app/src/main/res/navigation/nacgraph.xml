@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nacgraph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.utn.settingsexample.fragments.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_settingsActivity"
+            app:destination="@id/settingsActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.utn.settingsexample.SettingsActivity"
+        android:label="SettingsActivity" />
+</navigation>
