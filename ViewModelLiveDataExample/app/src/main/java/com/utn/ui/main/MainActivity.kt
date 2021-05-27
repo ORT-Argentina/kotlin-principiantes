@@ -1,8 +1,8 @@
-package com.utn.settingsexample
+package com.utn.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.preference.Preference
+import com.utn.viewmodellivedataexample.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,6 +10,4 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
-
 }

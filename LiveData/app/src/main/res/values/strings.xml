@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Ejemplo Android LiveData</string>
+
+    <!-- CATEGORIAS -->
+    <string name="empty_state_text">Aún no existen categorías</string>
+    <string name="categories_number">Categorías (%d)</string>
+    <string name="zero_categories">Categorías</string>
+    <string name="added_category_message">Categoría creada</string>
+    <string name="updated_category_message">Categoría actualizada</string>
+    <string name="deleted_category_message">Categoría eliminada</string>
+
+    <!-- AGREGAR/EDITAR CATEGORÍA -->
+    <string name="add_edit_helper_text">Escribe tu nueva categoría</string>
+    <string name="category_hint">Categoría</string>
+    <string name="menu_delete_option">Eliminar</string>
+    <string name="menu_save_option">Guardar</string>
+    <string name="dialog_delete_msg">¿Eliminar categoría?</string>
+    <string name="dialog_delete_positive">Eliminar</string>
+    <string name="dialog_save_negative">Cancelar</string>
+    <string name="category_name_error">Escribe al menos un caracter</string>
+    <string name="add_category_title">Añadir categoría</string>
+    <string name="edit_category_title">Editar categoría</string>
+
+</resources>
