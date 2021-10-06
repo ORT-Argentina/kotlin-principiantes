@@ -8,6 +8,7 @@ import com.utn.tabs.fragments.fragment2
 import com.utn.tabs.fragments.fragment3
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
+
     override fun createFragment(position: Int): Fragment {
 
         return when(position){

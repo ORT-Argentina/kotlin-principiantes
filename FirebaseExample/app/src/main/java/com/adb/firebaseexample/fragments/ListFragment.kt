@@ -98,6 +98,7 @@ class ListFragment : Fragment() {
 
         // Se queda escuchando cambios
         docRef = db.collection("mascotas").document("Pedro")
+
         docRef.addSnapshotListener { snapshot, e ->
             if (e != null) {
                 Log.w("Test", "Listen failed.", e)
@@ -129,36 +130,38 @@ class ListFragment : Fragment() {
             .addOnFailureListener { exception ->
                 Log.w(TAG, "Error getting documents: ", exception)
             }
+
+        fillRecycler()
     }
 
-//    fun fillRecycler(){
-//        val rootRef = FirebaseFirestore.getInstance()
-//        val query = rootRef.collection("mascotas")
-//
-//        val options = FirestoreRecyclerOptions.Builder<Mascota>()
-//            .setQuery(query, Mascota::class.java)
-//            .build()
-//
-//        adapter = object :
-//            FirestoreRecyclerAdapter<Mascota, MascotaHolder>(options) {
-//
-//            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MascotaHolder{
-//                val view = LayoutInflater.from(parent.context)
-//                    .inflate(R.layout.item_mascota, parent, false)
-//                return MascotaHolder(view)
-//            }
-//
-//            override fun onBindViewHolder(holder: MascotaHolder, position: Int, model: Mascota) {
-//                holder.setName(model.nombre)
-//            }
-//
-//            override fun onDataChanged() {
-//                super.onDataChanged()
-//            }
-//        }
-//        adapter.startListening()
-//        recMascotas.adapter = adapter
-//    }
+    fun fillRecycler() {
+        val rootRef = FirebaseFirestore.getInstance()
+        val query = rootRef.collection("mascotas")
+
+        val options = FirestoreRecyclerOptions.Builder<Mascota>()
+            .setQuery(query, Mascota::class.java)
+            .build()
+
+        adapter = object :
+            FirestoreRecyclerAdapter<Mascota, MascotaHolder>(options) {
+
+            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MascotaHolder {
+                val view = LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_mascota, parent, false)
+                return MascotaHolder(view)
+            }
+
+            override fun onBindViewHolder(holder: MascotaHolder, position: Int, model: Mascota) {
+                holder.setName(model.nombre)
+            }
+
+            override fun onDataChanged() {
+                super.onDataChanged()
+            }
+        }
+        adapter.startListening()
+        recMascotas.adapter = adapter
+    }
 }
 
 

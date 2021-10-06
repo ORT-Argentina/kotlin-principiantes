@@ -32,12 +32,12 @@ class MainFragment : Fragment() {
     private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        v = inflater.inflate(R.layout.main_fragment, container, false)
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
+            v = inflater.inflate(R.layout.main_fragment, container, false)
 
-        btnSettings = v.findViewById(R.id.btn_settings)
+            btnSettings = v.findViewById(R.id.btn_settings)
 
         return v
     }
@@ -51,6 +51,7 @@ class MainFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        //prefs.
 
 
         Log.d("Test",prefs.getBoolean("sync",false).toString())

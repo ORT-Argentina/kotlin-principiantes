@@ -34,14 +34,16 @@ class containerFragment : Fragment() {
         super.onStart()
 
         viewPager.setAdapter(ViewPagerAdapter(requireActivity()))
+
         TabLayoutMediator(tabLayout, viewPager, TabLayoutMediator.TabConfigurationStrategy { tab, position ->
-                when (position) {
-                    0 -> tab.text = "Tab #1"
-                    1 -> tab.text = "Tab #2"
-                    2 -> tab.text = "Tab #3"
-                    else -> tab.text = "undefined"
-                }
-            }).attach()
+
+            when (position) {
+                0 -> tab.text = "Tab #1"
+                1 -> tab.text = "Tab #2"
+                2 -> tab.text = "Tab #3"
+                else -> tab.text = "undefined"
+            }
+        }).attach()
     }
 
 }

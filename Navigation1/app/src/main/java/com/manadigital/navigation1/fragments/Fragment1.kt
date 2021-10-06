@@ -17,16 +17,18 @@ import com.manadigital.navigation1.R
  */
 class Fragment1 : Fragment() {
 
-    lateinit var v: View
+    lateinit var view1: View
     lateinit var btnGoToFragment2: Button
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        v = inflater.inflate(R.layout.fragment_fragment1, container, false)
+        //inflater.inflate(R.layout.fragment_fragment1, container, false)
 
-        btnGoToFragment2 = v.findViewById(R.id.btn_go_to_fragment2)
+        view1 = inflater.inflate(R.layout.fragment_fragment1, container, false)
+
+        btnGoToFragment2 = view1.findViewById(R.id.btn_go_to_fragment2)
         // Inflate the layout for this fragment
-        return v
+        return view1
     }
 
 
@@ -37,8 +39,8 @@ class Fragment1 : Fragment() {
 
         btnGoToFragment2.setOnClickListener {
 
-            val action2 = Fragment1Directions.actionFragment1ToFragment2()
-            v.findNavController().navigate(action2)
+            val action2 = Fragment1Directions.actionFragment1ToFragment22()
+            view1.findNavController().navigate(action2)
 
         }
     }

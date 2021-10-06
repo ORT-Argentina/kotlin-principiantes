@@ -7,12 +7,12 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txt_label"
+        android:id="@+id/txtLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="texto estático"
+        android:text="@string/hello_first_fragment"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_change_text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
@@ -26,22 +26,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_label" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLabel" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_percent="0.5" />
 
-    <Switch
-        android:id="@+id/swMain"
+    <Button
+        android:id="@+id/btnPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textOff="Apagador"
-        android:textOn="ON"
+        android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

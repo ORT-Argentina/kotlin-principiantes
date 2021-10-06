@@ -35,18 +35,19 @@ class Fragment1 : Fragment() {
         btnGoToFragment2 = v.findViewById(R.id.btn_go_to_fragment2)
         txtEmail = v.findViewById(R.id.txtEmail);
         txtPassword = v.findViewById(R.id.txtPassword);
+
+
         // Inflate the layout for this fragment
         return v
     }
 
-
     override fun onStart() {
         super.onStart()
         //user = User ("martin.rivas@ort.edu.ar","123456")
+
         btnGoToFragment2.setOnClickListener {
             user = User(txtEmail.text.toString(), txtPassword.text.toString())
-            if(
-                user.email.toUpperCase() == "ADMIN"
+            if(user.email.toUpperCase() == "ADMIN"
                 && user.password.toUpperCase() == "ADMIN" ) {
 
                 val action = Fragment1Directions.actionFragment1ToFragment2(user, user.email)

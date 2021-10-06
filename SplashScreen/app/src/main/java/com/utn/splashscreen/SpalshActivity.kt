@@ -19,7 +19,7 @@ class SpalshActivity : AppCompatActivity() {
 
             {
                 startActivity(Intent(this,MainActivity::class.java))
-                finish()
+                //finish()
             }
             , SPLASH_TIME_OUT)
     }

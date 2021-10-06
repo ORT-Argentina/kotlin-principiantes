@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("Clases", cons2.toString());
 
+
+
         mascotas.add(Mascota("Pedro",Mascota.Constants.typePerro,"Colie",3))
         mascotas.add(Mascota("Rodolfo",Mascota.Constants.typePerro,"Fox Terrier",4))
         mascotas.add(Mascota("Emilio",Mascota.Constants.typePerro,"Gran Danes",5))

@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         navController = Navigation.findNavController(this,R.id.nav_host_fragment)
 
         nav_view.setupWithNavController(navController)

@@ -85,20 +85,20 @@ suspend fun task1 (v:View){
 
 suspend fun task2 (v:View){
 
-    delay(30);
+    delay(5000);
     Log.d("Test","tarea2")
     Snackbar.make(v,"tarea2", Snackbar.LENGTH_SHORT).show()
 }
 
 suspend fun task3 (v:View){
 
-    delay(3000);
+    delay(7000);
     Log.d("Test","tarea3")
     Snackbar.make(v,"tarea3", Snackbar.LENGTH_SHORT).show()
 }
 
  fun task4 (v:View){
-    Log.d("Test","tarea4")
+     Log.d("Test","tarea4")
      Snackbar.make(v,"tarea3", Snackbar.LENGTH_SHORT).show()
 }
 

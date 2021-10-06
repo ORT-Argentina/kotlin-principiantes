@@ -21,6 +21,7 @@ class Fragment2 : Fragment() {
     lateinit var v: View
     lateinit var user : User
     lateinit var lblNombre : TextView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,5 +42,11 @@ class Fragment2 : Fragment() {
         lblNombre.text = user.email
 
         Snackbar.make(v,user.email,Snackbar.LENGTH_SHORT).show()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+
     }
 }

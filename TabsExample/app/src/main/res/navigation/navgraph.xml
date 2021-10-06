@@ -9,7 +9,14 @@
         android:id="@+id/containerFragment"
         android:name="com.utn.tabs.fragments.containerFragment"
         android:label="fragment_container"
-        tools:layout="@layout/fragment_container" />
+        tools:layout="@layout/fragment_container" >
+        <action
+            android:id="@+id/action_containerFragment_to_fragment3"
+            app:destination="@id/fragment3" />
+        <action
+            android:id="@+id/action_containerFragment_to_fragment1"
+            app:destination="@id/fragment1" />
+    </fragment>
     <fragment
         android:id="@+id/fragment3"
         android:name="com.utn.tabs.fragments.fragment3"
