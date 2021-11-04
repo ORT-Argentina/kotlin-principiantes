@@ -55,9 +55,8 @@ class fragment1 : Fragment() {
 
         viewModel.name.observe(viewLifecycleOwner, Observer { result ->
             txtCartel.text = result.toString()
-            /*val action2 = fragment1Directions.actionFragment1ToFragment2();
-            v.findNavController().navigate(action2)*/
-
+            val action2 = fragment1Directions.actionFragment1ToFragment2();
+            v.findNavController().navigate(action2)
         })
     }
 
@@ -66,8 +65,9 @@ class fragment1 : Fragment() {
         super.onStart()
 
         btnChange.setOnClickListener {
-
             viewModel.changeName()
+            /*val action2 = fragment1Directions.actionFragment1ToFragment2();
+            v.findNavController().navigate(action2)*/
         }
 
         btnGo2.setOnClickListener{

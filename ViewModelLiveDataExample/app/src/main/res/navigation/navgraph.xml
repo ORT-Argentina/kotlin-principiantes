@@ -21,7 +21,11 @@
         android:id="@+id/fragment2"
         android:name="com.utn.fragments.fragment2"
         android:label="fragment2_fragment"
-        tools:layout="@layout/fragment2_fragment" />
+        tools:layout="@layout/fragment2_fragment" >
+        <action
+            android:id="@+id/action_fragment2_to_fragment1"
+            app:destination="@id/fragment1" />
+    </fragment>
     <fragment
         android:id="@+id/blankFragment"
         android:name="com.utn.fragments.BlankFragment"
