@@ -66,7 +66,7 @@ class ListFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-
+/*
         var mascota : Mascota = Mascota("Pedro",Mascota.Constants.typePerro,"Colie",2,"imagen.com")
 
         db.collection("mascotas").document(mascota.nombre).set(mascota)
@@ -79,7 +79,7 @@ class ListFragment : Fragment() {
         for (mascota in viewModel.mascotas) {
             db.collection("mascotas").document(mascota.nombre).set(mascota)
         }
-
+*/
         // Leer datos una sola vez
         var docRef = db.collection("mascotas").document("Pedro")
 
