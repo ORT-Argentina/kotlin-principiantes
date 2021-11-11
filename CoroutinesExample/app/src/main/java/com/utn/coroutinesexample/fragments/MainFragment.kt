@@ -40,16 +40,14 @@ class MainFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-
-
         val parentJob = Job()
         val scope = CoroutineScope(Dispatchers.Default + parentJob)
 
-        scope.launch {
+        //scope.launch {
             task1(v)
             task2(v)
             task3(v)
-        }
+        //}
 
         task4(v)
 
