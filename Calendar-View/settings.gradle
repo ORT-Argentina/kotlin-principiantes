@@ -1,0 +1,2 @@
+include ':app', ':highlightable-calendar-view'
+rootProject.name='Highlightable-Calender-View'

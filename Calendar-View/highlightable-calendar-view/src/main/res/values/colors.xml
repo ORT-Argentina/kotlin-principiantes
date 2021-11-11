@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="darkGrey">#222222</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="title_textColor">#1e1e1e</color>
+    <color name="title_backgroundColor">@color/transparent</color>
+    <color name="title_monthChangeButtonTint">@color/black</color>
+
+    <color name="weekDay_backgroundColor">@color/transparent</color>
+    <color name="weekDay_textColor">@color/black</color>
+
+    <color name="day_textColor_currentDay">#0000ff</color>
+
+    <color name="day_textColor_disabled">#aaffffff</color>
+    <color name="day_backgroundColor_disabled">#44010508</color>
+
+    <color name="day_textColor_enabled">@color/black</color>
+    <color name="day_backgroundColor_enabled">@color/white</color>
+
+    <color name="selectedDay_backgroundColor">@color/darkGrey</color>
+    <color name="selectedDay_textColor">@color/white</color>
+</resources>

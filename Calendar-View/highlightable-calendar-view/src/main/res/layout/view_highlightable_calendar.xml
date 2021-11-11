@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/minHeight_titleLayout"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/button_previousMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:contentDescription="@string/contentDescription_button_previousMonth"
+                android:focusable="true"
+                android:paddingStart="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:src="@drawable/ic_arrow_left" />
+
+            <TextView
+                android:id="@+id/monthTitle"
+                style="@style/HighlightableCalendarView.MonthTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_titleText_horizontal"
+                android:layout_marginEnd="@dimen/margin_titleText_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAllCaps="true"
+                tools:text="May 2020" />
+
+            <ImageView
+                android:id="@+id/button_nextMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:contentDescription="@string/contentDescription_button_nextMonth"
+                android:focusable="true"
+                android:paddingStart="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weekLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/weekDay_1"
+                style="@style/HighlightableCalendarView.DayOfTheWeek"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                tools:text="Sun" />
+
+            <TextView
+                android:id="@+id/weekDay_2"
+                style="@style/HighlightableCalendarView.DayOfTheWeek"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                tools:text="Mon" />
+
+            <TextView
+                android:id="@+id/weekDay_3"
+                style="@style/HighlightableCalendarView.DayOfTheWeek"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                tools:text="Tue" />
+
+            <TextView
+                android:id="@+id/weekDay_4"
+                style="@style/HighlightableCalendarView.DayOfTheWeek"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                tools:text="Wed" />
+
+            <TextView
+                android:id="@+id/weekDay_5"
+                style="@style/HighlightableCalendarView.DayOfTheWeek"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                tools:text="Thu" />
+
+            <TextView
+                android:id="@+id/weekDay_6"
+                style="@style/HighlightableCalendarView.DayOfTheWeek"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                tools:text="Fri" />
+
+            <TextView
+                android:id="@+id/weekDay_7"
+                style="@style/HighlightableCalendarView.DayOfTheWeek"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                tools:text="Sat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_monthDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/weekRow_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText1"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText2"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText3"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="3" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText4"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="4" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText5"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="5" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText6"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="6" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText7"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/weekRow_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText8"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="8" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText9"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="9" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText10"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="10" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText11"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="11" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText12"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="12" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText13"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="13" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText14"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/weekRow_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText15"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="15" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText16"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="16" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText17"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="17" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText18"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="18" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText19"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="19" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText20"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="20" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText21"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="21" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/weekRow_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText22"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="22" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText23"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="23" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText24"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="24" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText25"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="25" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText26"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="26" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText27"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="27" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText28"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="28" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/weekRow_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText29"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="29" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText30"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="30" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText31"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="31" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText32"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="32" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText33"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="33" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText34"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="34" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText35"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="35" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/weekRow_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText36"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="36" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText37"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="37" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText38"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="38" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText39"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="39" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText40"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="40" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText41"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="41" />
+
+                <com.varunbarad.highlightable_calendar_view.DayView
+                    android:id="@+id/dayOfMonthText42"
+                    style="@style/HighlightableCalendarView.DayOfTheMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="42" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

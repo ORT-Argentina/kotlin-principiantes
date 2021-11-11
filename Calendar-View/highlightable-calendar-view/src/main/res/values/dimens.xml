@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Date Title Layout -->
+    <dimen name="dateTitleTextSize">18sp</dimen>
+    <dimen name="margin_titleText_horizontal">8dp</dimen>
+    <dimen name="minHeight_titleLayout">48dp</dimen>
+
+    <!-- Week Layout -->
+    <dimen name="dayOfWeekTextSize">16sp</dimen>
+
+    <!-- Day of the Month -->
+    <dimen name="underline_weight">6dp</dimen>
+    <dimen name="underline_height">2dp</dimen>
+    <dimen name="dayOfMonth_backgroundSize">32dp</dimen>
+    <dimen name="dayOfMonth_indicatorSize">3dp</dimen>
+    <dimen name="dayOfMonth_imageMarginTop">20dp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="minHeight_dayCell">40dp</dimen>
+
+    <!-- New Dimens -->
+    <dimen name="calendarTitlePaddingTop">8dp</dimen>
+    <dimen name="calendarTitlePaddingBottom">8dp</dimen>
+    <dimen name="weekTitlePaddingTop">8dp</dimen>
+    <dimen name="weekTitlePaddingBottom">8dp</dimen>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.varunbarad.highlightable_calendar_view.HighlightableCalendarView
+        android:id="@+id/calendar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:dayBackgroundColorDisabled="#66000000"
+        app:dayBackgroundColorEnabled="#ffffff"
+        app:dayTextColorCurrentDay="#ff0000"
+        app:dayTextColorDisabled="#bbffffff"
+        app:dayTextColorEnabled="#000000"
+        app:firstDayOfWeek="monday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:selectedDay_backgroundColor="#88ff0000"
+        app:selectedDay_textColor="#ffffff"
+        app:titleBackgroundColor="#bb000000"
+        app:titleMonthChangeButtonTint="#99ffffff"
+        app:titleTextColor="#ffffff"
+        app:weekDay_backgroundColor="#99000000"
+        app:weekDay_textColor="#ffffff" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HighlightableCalendarView">
+        <!-- Specify which day to start the week with -->
+        <!-- Match the values here with ordering in enum class DayOfWeek -->
+        <attr name="firstDayOfWeek" format="enum">
+            <enum name="sunday" value="0" />
+            <enum name="monday" value="1" />
+            <enum name="tuesday" value="2" />
+            <enum name="wednesday" value="3" />
+            <enum name="thursday" value="4" />
+            <enum name="friday" value="5" />
+            <enum name="saturday" value="6" />
+        </attr>
+
+        <!-- Specify color with which you want to highlight current day's text -->
+        <attr name="dayTextColorCurrentDay" format="color" />
+
+        <!-- Specify colors for days which are not in current month -->
+        <attr name="dayTextColorDisabled" format="color" />
+        <attr name="dayBackgroundColorDisabled" format="color" />
+
+        <!-- Specify colors for days which are in current month -->
+        <attr name="dayTextColorEnabled" format="color" />
+        <attr name="dayBackgroundColorEnabled" format="color" />
+
+        <!-- Specify color for month-name title -->
+        <attr name="titleTextColor" format="color" />
+        <!-- Specify background color for title -->
+        <attr name="titleBackgroundColor" format="color" />
+        <!-- Specify color for month-change buttons -->
+        <attr name="titleMonthChangeButtonTint" format="color" />
+
+        <!-- Specify colors for week-days -->
+        <attr name="weekDay_backgroundColor" format="color" />
+        <attr name="weekDay_textColor" format="color" />
+
+        <!-- Specify colors for selected day -->
+        <attr name="selectedDay_backgroundColor" format="color" />
+        <attr name="selectedDay_textColor" format="color" />
+    </declare-styleable>
+</resources>
