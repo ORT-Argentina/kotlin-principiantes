@@ -3,11 +3,14 @@ package com.manadigital.kotlinclasses
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import com.manadigital.kotlinclasses.Entities.*
 
 class MainActivity : AppCompatActivity() {
 
     var mascotas : MutableList<Mascota> = ArrayList<Mascota>()
+
+    lateinit var btnClick : Button
 
     lateinit var mascota : Mascota
 
@@ -19,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var cons2 : Constructor2
 
+    lateinit var mascota2: Mascota
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,13 +34,17 @@ class MainActivity : AppCompatActivity() {
 
         cons2 = Constructor2("Felix")
 
+
+
+        mascota2 = Mascota("Pedro",Mascota.Constants.typePerro,"Colie",3)
+
+        Log.d("Inventar", mascota2.toString());
+
         Log.d("Clases", vacia.toString());
 
         Log.d("Clases", cons1.toString());
 
         Log.d("Clases", cons2.toString());
-
-
 
         mascotas.add(Mascota("Pedro",Mascota.Constants.typePerro,"Colie",3))
         mascotas.add(Mascota("Rodolfo",Mascota.Constants.typePerro,"Fox Terrier",4))
@@ -47,6 +56,8 @@ class MainActivity : AppCompatActivity() {
         mascota = Mascota("David",Mascota.Constants.typeGato,"Arlequin",8)
 
         Log.d("Test",mascota.toString())
+
+
 
         for (mascotaActual in mascotas)
         {

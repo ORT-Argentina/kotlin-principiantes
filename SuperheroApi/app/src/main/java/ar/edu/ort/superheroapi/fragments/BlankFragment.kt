@@ -44,6 +44,8 @@ class BlankFragment : Fragment() {
 
         txtParam = v.findViewById(R.id.txtParam)
 
+        requireContext()
+
         return v
     }
 

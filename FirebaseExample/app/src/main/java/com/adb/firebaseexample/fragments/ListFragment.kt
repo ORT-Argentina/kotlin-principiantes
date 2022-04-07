@@ -1,5 +1,6 @@
 package com.adb.firebaseexample.fragments
 
+import android.R.attr
 import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
@@ -24,6 +25,16 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 import com.manadigital.recyclerview1.entities.Mascota
+import org.json.JSONException
+
+import android.widget.Toast
+
+import android.R.attr.tag
+
+import org.json.JSONObject
+
+
+
 
 class ListFragment : Fragment() {
 
@@ -66,6 +77,8 @@ class ListFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+
+
 /*
         var mascota : Mascota = Mascota("Pedro",Mascota.Constants.typePerro,"Colie",2,"imagen.com")
 
@@ -161,6 +174,46 @@ class ListFragment : Fragment() {
         }
         adapter.startListening()
         recMascotas.adapter = adapter
+    }
+
+    var req: JsonObjectRequest = object : JsonObjectRequest(Request.Method.GET, url,
+        null, object : Listener<JSONObject?>() {
+            fun onResponse(response: JSONObject) {
+                Log.d(attr.tag, response.toString())
+                activity.hideDialog()
+                try {
+                    activity.onRequestServed(response, code)
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+            }
+        }, object : ErrorListener() {
+            fun onErrorResponse(error: VolleyError) {
+                VolleyLog.d(attr.tag, "Error: " + error.getMessage())
+                Log.e(attr.tag, "Site Info Error: " + error.getMessage())
+                Toast.makeText(
+                    activity!!.applicationContext,
+                    error.getMessage(), Toast.LENGTH_SHORT
+                ).show()
+                activity.hideDialog()
+                try {
+                    activity.onRequestServed(null, code)
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+            }
+        }) {//headers.put("Content-Type", "application/json");
+        /**
+         * Passing some request headers
+         */
+        @get:Throws(AuthFailureError::class)
+        val headers: Map<String, String>?
+            get() {
+                val headers = HashMap<String, String>()
+                //headers.put("Content-Type", "application/json");
+                headers["key"] = "Value"
+                return headers
+            }
     }
 }
 
