@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/fragmento1">
+
+    <fragment
+        android:id="@+id/fragmento1"
+        android:name="ar.edu.ort.navigation3.fragments.Fragmento1"
+        android:label="fragment_1"
+        tools:layout="@layout/fragment_1" >
+        <action
+            android:id="@+id/action_fragment1_to_fragmento2"
+            app:destination="@id/fragmento2"
+            app:popUpTo="@id/fragmento1"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_fragment1_to_fragmento3"
+            app:destination="@id/fragmento3"
+            app:popUpTo="@id/fragmento1"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmento2"
+        android:name="ar.edu.ort.navigation3.fragments.Fragmento2"
+        android:label="fragment_fragmento2"
+        tools:layout="@layout/fragmento2" >
+        <action
+            android:id="@+id/action_fragmento2_to_fragment1"
+            app:destination="@id/fragmento1"
+            app:popUpTo="@id/fragmento2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmento3"
+        android:name="ar.edu.ort.navigation3.fragments.Fragmento3"
+        android:label="fragment_fragmento3"
+        tools:layout="@layout/fragmento3" >
+        <action
+            android:id="@+id/action_fragmento3_to_fragment1"
+            app:destination="@id/fragmento1"
+            app:popUpTo="@id/fragmento3"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

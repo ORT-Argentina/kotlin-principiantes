@@ -1,4 +1,4 @@
-package ar.edu.ort.myapplication.fragments
+package ar.edu.ort.navigation3.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,16 +8,19 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.findNavController
-import ar.edu.ort.myapplication.R
+import ar.edu.ort.navigation3.R
 
-class Fragment3 : Fragment() {
 
-    lateinit var fragment: View
-    lateinit var btnNav1: Button
-    lateinit var titMain: TextView
+
+class Fragmento2 : Fragment() {
+
+    lateinit var vista: View
+    lateinit var btn1: Button
+    lateinit var txtView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -25,23 +28,23 @@ class Fragment3 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        fragment =  inflater.inflate(R.layout.fragment_3, container, false)
+        vista = inflater.inflate(R.layout.fragmento2, container, false)
 
-        btnNav1 = fragment.findViewById(R.id.btnNavFrag)
+        btn1 = vista.findViewById(R.id.btnNavFrag1)
+        txtView = vista.findViewById(R.id.txtViewLogin3)
 
-        titMain = fragment.findViewById(R.id.txtTitle3)
-
-        return fragment
+        return vista
     }
 
     override fun onStart() {
         super.onStart()
 
-        titMain.text = fragment.id.toString()
+        activity?.title = "Fragmento2"
 
-        btnNav1.setOnClickListener {
-            val action = Fragment3Directions.actionFragment3ToFragment1()
-            fragment.findNavController().navigate(action)
+        btn1.setOnClickListener {
+            val action = Fragmento2Directions.actionFragmento2ToFragment1()
+            vista.findNavController().navigate(action)
         }
     }
+
 }

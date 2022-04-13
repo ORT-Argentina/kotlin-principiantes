@@ -40,7 +40,7 @@ class Fragment1 : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        txtTitle.text = this.id.toString()
+        txtTitle.text = frag1.id.toString()
 
         btnNav1.setOnClickListener{
             val action = Fragment1Directions.actionFragment1ToFragment2()

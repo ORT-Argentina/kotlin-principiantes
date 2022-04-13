@@ -12,15 +12,16 @@
         tools:layout="@layout/fragment_1">
         <action
             android:id="@+id/action_fragment1_to_fragment2"
-            app:destination="@id/fragment2" />
+            app:destination="@id/fragment2"
+            app:popUpTo="@+id/fragment2"
+            app:popUpToInclusive="true"
+            />
         <action
             android:id="@+id/action_fragment1_to_fragment3"
-            app:destination="@id/fragment3" />
-        <deepLink
-            android:id="@+id/deepLink"
-            app:action="OPEN"
-            app:mimeType="text/html"
-            app:uri="https://localhost/open" />
+            app:destination="@id/fragment3"
+            app:popUpTo="@+id/fragment3"
+            app:popUpToInclusive="true"
+            />
     </fragment>
     <fragment
         android:id="@+id/fragment2"
@@ -29,8 +30,6 @@
         tools:layout="@layout/fragment_2" >
         <action
             android:id="@+id/action_fragment2_to_fragment1"
-            app:popUpTo="@+id/a"
-            app:popUpToInclusive="true"
             app:destination="@id/fragment1" />
     </fragment>
     <fragment
