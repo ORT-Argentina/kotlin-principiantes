@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Fragmento2" >
+    tools:context=".Fragments.Fragmento2" >
 
     <Button
         android:id="@+id/btnNavFrag1"

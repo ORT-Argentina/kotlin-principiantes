@@ -1,4 +1,4 @@
-package ar.edu.ort.navigation3.fragments
+package ar.edu.ort.navigation3.Fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,9 +10,7 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import ar.edu.ort.navigation3.R
 
-
-
-class Fragmento2 : Fragment() {
+class Fragmento3 : Fragment() {
 
     lateinit var vista: View
     lateinit var btn1: Button
@@ -28,10 +26,10 @@ class Fragmento2 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        vista = inflater.inflate(R.layout.fragmento2, container, false)
+        vista = inflater.inflate(R.layout.fragmento3, container, false)
 
-        btn1 = vista.findViewById(R.id.btnNavFrag1)
-        txtView = vista.findViewById(R.id.txtViewLogin3)
+        btn1 = vista.findViewById(R.id.btnNavFrag1Alt)
+        txtView = vista.findViewById(R.id.txtViewLogin2)
 
         return vista
     }
@@ -39,10 +37,13 @@ class Fragmento2 : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        activity?.title = "Fragmento2"
+        activity?.title = "Fragmento3"
+
+        val dato = Fragmento3Args.fromBundle(requireArguments()).dato
+        txtView.text = dato.undato
 
         btn1.setOnClickListener {
-            val action = Fragmento2Directions.actionFragmento2ToFragment1()
+            val action = Fragmento3Directions.actionFragmento3ToFragment1()
             vista.findNavController().navigate(action)
         }
     }

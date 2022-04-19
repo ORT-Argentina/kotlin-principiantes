@@ -1,4 +1,4 @@
-package ar.edu.ort.navigation3.fragments
+package ar.edu.ort.navigation3.Fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.navigation.findNavController
 import ar.edu.ort.navigation3.R
+import ar.edu.ort.navigation3.Entities.Dato
 
 
 /**
@@ -22,6 +24,8 @@ class Fragmento1 : Fragment() {
     lateinit var btn1: Button
     lateinit var btn2: Button
     lateinit var txtLogin: EditText
+    lateinit var txtTitle: TextView
+    lateinit var textoAEnviar: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +41,7 @@ class Fragmento1 : Fragment() {
         btn1 = vista.findViewById(R.id.btnNavFrag2)
         btn2 = vista.findViewById(R.id.btnNavFrag3)
         txtLogin = vista.findViewById(R.id.txtUsername)
+        txtTitle = vista.findViewById(R.id.txtTitle)
 
         return vista
     }
@@ -46,13 +51,18 @@ class Fragmento1 : Fragment() {
 
         activity?.title = "Fragmento1"
 
+        txtTitle.text = this.id.toString()
+
        btn1.setOnClickListener {
-           val action = Fragmento1Directions.actionFragment1ToFragmento2()
+           textoAEnviar = txtLogin.text.toString()
+           val action = Fragmento1Directions.actionFragment1ToFragmento2(textoAEnviar)
            vista.findNavController().navigate(action)
        }
 
         btn2.setOnClickListener {
-            val action = Fragmento1Directions.actionFragment1ToFragmento3()
+            textoAEnviar = txtLogin.text.toString()
+            val data = Dato(textoAEnviar)
+            val action = Fragmento1Directions.actionFragment1ToFragmento3(data)
             vista.findNavController().navigate(action)
         }
     }
