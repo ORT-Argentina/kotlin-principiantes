@@ -27,6 +27,9 @@ class containerFragment : Fragment() {
         tabLayout = v.findViewById(R.id.tab_layout)
         viewPager = v.findViewById(R.id.view_pager)
 
+        //Inactiva el movimingo Swipping de los dedos, Unicamente por código
+        viewPager.isUserInputEnabled = false
+
         return v
     }
 
@@ -36,10 +39,17 @@ class containerFragment : Fragment() {
         viewPager.setAdapter(ViewPagerAdapter(requireActivity()))
 
         TabLayoutMediator(tabLayout, viewPager, TabLayoutMediator.TabConfigurationStrategy { tab, position ->
-
             when (position) {
-                0 -> tab.text = "Tab #1"
-                1 -> tab.text = "Tab #2"
+                0 -> {
+                    //tab.text = "Tab #1"
+                    tab.setIcon(R.drawable.tabicon)
+                    tab.text
+                }
+                1 -> {
+                    tab.text = "Tab #2"
+                    tab.orCreateBadge.isVisible = true
+                    tab.orCreateBadge.number = 3
+                }
                 2 -> tab.text = "Tab #3"
                 else -> tab.text = "undefined"
             }
