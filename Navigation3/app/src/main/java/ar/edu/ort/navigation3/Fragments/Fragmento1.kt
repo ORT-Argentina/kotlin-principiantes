@@ -55,7 +55,7 @@ class Fragmento1 : Fragment() {
 
        btn1.setOnClickListener {
            textoAEnviar = txtLogin.text.toString()
-           val action = Fragmento1Directions.actionFragment1ToFragmento2(textoAEnviar)
+           val action = Fragmento1Directions.actionFragment1ToFragmento2(textoAEnviar, "hola")
            vista.findNavController().navigate(action)
        }
 

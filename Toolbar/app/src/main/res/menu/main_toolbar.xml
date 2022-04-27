@@ -13,5 +13,9 @@
         android:icon="@drawable/fav"
         android:title="fav"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/test"
+        android:icon="@android:drawable/btn_star"
+        android:title="Prueba" />
 
 </menu>

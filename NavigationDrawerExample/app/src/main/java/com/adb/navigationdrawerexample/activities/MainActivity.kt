@@ -3,6 +3,7 @@ package com.adb.navigationdrawerexample.activities
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
@@ -30,15 +31,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.drawe_menu, menu)
         return true
     }
 
-
     /*override fun onBackPressed() {
-        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
-            drawer_layout.closeDrawer(GravityCompat.START)
+        if (drawer_layout_id.isDrawerOpen(GravityCompat.START)) {
+            drawer_layout_id.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }

@@ -10,14 +10,17 @@
             android:id="@+id/fragment1"
             android:icon="@drawable/iconbatman"
             android:title="Fragment1" />
+
         <item
             android:id="@+id/fragment2"
             android:icon="@drawable/iconjoker"
             android:title="Fragment2" />
+
         <item
             android:id="@+id/fragment3"
             android:icon="@drawable/iconpenguin"
             android:title="Fragment3" />
+
         <item
             android:id="@+id/test"
             android:icon="@drawable/iconpenguin"

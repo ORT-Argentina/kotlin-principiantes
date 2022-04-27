@@ -15,7 +15,6 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
             0 -> fragment1()
             1 -> fragment2()
             2 -> fragment3()
-
             else -> fragment1()
         }
     }

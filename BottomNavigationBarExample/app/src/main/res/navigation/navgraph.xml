@@ -10,11 +10,13 @@
         android:name="com.adb.bottomnavigationbarexample.fragments.Fragment1"
         android:label="fragment_1"
         tools:layout="@layout/fragment_1" />
+
     <fragment
         android:id="@+id/fragment2"
         android:name="com.adb.bottomnavigationbarexample.fragments.Fragment2"
         android:label="fragment_2"
         tools:layout="@layout/fragment_2" />
+
     <fragment
         android:id="@+id/fragment3"
         android:name="com.adb.bottomnavigationbarexample.fragments.Fragment3"

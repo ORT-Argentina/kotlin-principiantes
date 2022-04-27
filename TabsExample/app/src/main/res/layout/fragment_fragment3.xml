@@ -20,8 +20,8 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="377dp"
+        android:layout_height="437dp"
         android:layout_weight="1"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"

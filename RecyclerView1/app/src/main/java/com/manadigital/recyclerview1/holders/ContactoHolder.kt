@@ -1,6 +1,7 @@
 package com.manadigital.recyclerview1.holders
 
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +22,10 @@ class ContactoHolder (v: View) : RecyclerView.ViewHolder(v) {
 
     fun getCardLayout (): CardView {
         return view.findViewById(R.id.card_package_item)
+    }
+
+    fun getButton (): Button {
+        return view.findViewById(R.id.button)
     }
 
 //

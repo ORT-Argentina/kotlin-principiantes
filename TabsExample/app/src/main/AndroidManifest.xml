@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents"> <!-- Cambiar AppTheme por Theme.MaterialComponents -->
+        android:theme="@style/AppTheme"> <!-- Cambiar AppTheme por Theme.MaterialComponents -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

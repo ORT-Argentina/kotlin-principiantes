@@ -33,18 +33,18 @@ class listFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        v =  inflater.inflate(R.layout.list_fragment, container, false)
-        recContactos = v.findViewById(R.id.rec_contactos)
-        return v
-    }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+        v =  inflater.inflate(R.layout.list_fragment, container, false)
+
+        recContactos = v.findViewById(R.id.rec_contactos)
+
+        return v
     }
 
     override fun onStart() {
         super.onStart()
 
+        //Creo la Lista Dinamica
         for (i in 1..5) {
             contactos.add(Contacto("Pedro.$i",26, Contacto.Constants.cursoA))
             contactos.add(Contacto("Rodolfo.$i",30, Contacto.Constants.cursoA))
@@ -60,12 +60,12 @@ class listFragment : Fragment() {
         recContactos.layoutManager = linearLayoutManager
 
 
-        contactoListAdapter = ContactoListAdapter(contactos);
+        //contactoListAdapter = ContactoListAdapter(contactos);
 
-        /*
+
         contactoListAdapter = ContactoListAdapter(contactos) { x ->
             onItemClick(x)
-        }*/
+        }
 
         recContactos.adapter = contactoListAdapter
 

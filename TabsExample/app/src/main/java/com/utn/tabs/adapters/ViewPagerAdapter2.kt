@@ -6,6 +6,7 @@ import com.utn.tabs.fragments.fragment4
 import com.utn.tabs.fragments.fragment5
 
 class ViewPagerAdapter2(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
+
     override fun getItemCount(): Int {
         return 2
     }
