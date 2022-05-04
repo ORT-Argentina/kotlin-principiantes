@@ -24,10 +24,6 @@ class ContactoHolder (v: View) : RecyclerView.ViewHolder(v) {
         return view.findViewById(R.id.card_package_item)
     }
 
-    fun getButton (): Button {
-        return view.findViewById(R.id.button)
-    }
-
 //
 //        fun getImageView () : ImageView {
 //            return view.findViewById(R.id.img_item)

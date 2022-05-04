@@ -60,9 +60,6 @@ class listFragment : Fragment() {
         recContactos.layoutManager = linearLayoutManager
 
 
-        //contactoListAdapter = ContactoListAdapter(contactos);
-
-
         contactoListAdapter = ContactoListAdapter(contactos) { x ->
             onItemClick(x)
         }
@@ -71,7 +68,7 @@ class listFragment : Fragment() {
 
     }
 
-     fun onItemClick ( position : Int ) : Boolean {
+     fun onItemClick ( position : Int ) : Boolean{
         Snackbar.make(v,position.toString(),Snackbar.LENGTH_SHORT).show()
          return true
     }
