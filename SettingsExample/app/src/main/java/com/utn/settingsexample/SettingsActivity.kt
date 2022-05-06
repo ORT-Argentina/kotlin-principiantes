@@ -23,12 +23,8 @@ class SettingsActivity : AppCompatActivity() {
     class SettingsFragment : PreferenceFragmentCompat() {
 
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-            TODO("Not yet implemented")
-        }
-
-        /*override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
-        }*/
+        }
 
         /*override fun onPreferenceChange(
             preference: Preference,

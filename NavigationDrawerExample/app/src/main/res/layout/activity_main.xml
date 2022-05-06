@@ -16,7 +16,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:navGraph="@navigation/navgraph" />
 
     <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
@@ -27,5 +26,6 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:menu="@menu/drawe_menu" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

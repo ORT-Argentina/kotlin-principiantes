@@ -3,6 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/app_bar_search"
+        android:icon="@drawable/add"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/app_bar_switch"
+        android:title="Switch"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/action_add"
         android:icon="@drawable/add"
         android:title="add"

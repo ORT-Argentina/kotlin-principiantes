@@ -8,18 +8,20 @@ import kotlinx.coroutines.delay
 
 class SpalshActivity : AppCompatActivity() {
 
-    private val SPLASH_TIME_OUT:Long = 3000 // 3 sec
+    companion object {
+        private const val SPLASH_TIME_OUT:Long = 3000 // 3 seconds
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spalsh)
 
 
-        Handler().postDelayed(
 
+        Handler().postDelayed(
             {
                 startActivity(Intent(this,MainActivity::class.java))
-                //finish()
+                finish()
             }
             , SPLASH_TIME_OUT)
     }

@@ -42,17 +42,15 @@ class MainFragment : Fragment() {
         return v
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
+    /*override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
-    }
+    }*/
 
     override fun onStart() {
         super.onStart()
         val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
-        //prefs.
-
 
         Log.d("Test",prefs.getBoolean("sync",false).toString())
         Log.d("Test",prefs.getString("reply",""))
