@@ -6,15 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.utn.model.viewmodel.Fragment1ViewModel
 
 import com.utn.viewmodellivedataexample.R
 
-class fragment2 : Fragment() {
+class Fragment2 : Fragment() {
 
     companion object {
-        fun newInstance() = fragment2()
+        fun newInstance() = Fragment2()
     }
 
     lateinit var v: View
@@ -23,7 +25,7 @@ class fragment2 : Fragment() {
     private lateinit var viewModel1: Fragment1ViewModel
 
     lateinit var btnChange : Button
-
+    lateinit var txtNewText : EditText
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,27 +34,31 @@ class fragment2 : Fragment() {
         v =  inflater.inflate(R.layout.fragment2_fragment, container, false)
 
         btnChange = v.findViewById(R.id.btn_go)
-
+        txtNewText = v.findViewById(R.id.txt_new_text)
         return v
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        //viewModel2 = ViewModelProvider(requireActivity()).get(Fragment2ViewModel::class.java)
+
         viewModel1 = ViewModelProvider(requireActivity()).get(Fragment1ViewModel::class.java)
 
-        // TODO: Use the ViewModel
+        requireActivity().title = viewModel1.name.value.toString()
+        txtNewText.setText(viewModel1.name.value.toString())
     }
 
-   /* override fun onStart() {
-        super.onStart()
+   override fun onStart() {
+       super.onStart()
 
-        btnChange.setOnClickListener {
+       /*txtNewText.doOnTextChanged{ text, _, _, _ ->
+           viewModel1.name.value = text.toString()
+       }*/
 
-            //viewModel1.name.value = "otro valor"
-
-            v.findNavController().popBackStack()
-        }
-    }*/
+       btnChange.setOnClickListener {
+            viewModel1.name.value = txtNewText.text.toString()
+            val action2 = Fragment2Directions.actionFragment2ToFragment1()
+            v.findNavController().navigate(action2)
+       }
+    }
 
 }

@@ -1,4 +1,4 @@
-package com.utn.fragments
+package com.utn.model.viewmodel
 
 import androidx.lifecycle.ViewModel
 

@@ -6,6 +6,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -13,7 +14,8 @@ import java.util.concurrent.Executors
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import ar.edu.ort.camerax.R
-import kotlinx.android.synthetic.main.activity_main.*
+//import kotlinx.android.synthetic.main.activity_main.*
+import androidx.camera.view.PreviewView
 import java.io.File
 import java.nio.ByteBuffer
 import java.text.SimpleDateFormat
@@ -26,6 +28,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var outputDirectory: File
     private lateinit var cameraExecutor: ExecutorService
+    private lateinit var camera_capture_button: Button
+    private lateinit var viewFinder: PreviewView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +43,8 @@ class MainActivity : AppCompatActivity() {
                     this, REQUIRED_PERMISSIONS, REQUEST_CAMERA_PERMISSION)
         }
 
+        camera_capture_button = findViewById<android.widget.Button>(R.id.camera_capture_button)
+        viewFinder = findViewById(R.id.viewFinder)
         // Set up the listener for take photo button
         camera_capture_button.setOnClickListener { takePhoto() }
 

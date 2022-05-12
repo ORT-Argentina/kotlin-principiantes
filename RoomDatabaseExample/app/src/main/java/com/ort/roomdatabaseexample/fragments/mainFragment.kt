@@ -66,24 +66,19 @@ class mainFragment : Fragment() {
         userDao = db?.userDao()
 
         btnAdd.setOnClickListener {
-
-
             userDao?.insertPerson(User(i, edtName.text.toString(), edtEmail.text.toString()))
             i += 1
         }
 
         btnDelete.setOnClickListener {
-
             userDao?.delete(User(0, "", ""))
         }
 
         btnEdit.setOnClickListener {
-
             userDao?.updatePerson(User(0, "Juan", "juan@utn.com"))
         }
 
         btnSearch.setOnClickListener {
-
             Log.d("Test", userDao?.loadPersonById(0)?.name.toString())
 
             userList = userDao?.loadAllPersons() as MutableList<User>

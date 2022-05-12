@@ -11,13 +11,14 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.utn.model.viewmodel.Fragment1ViewModel
 
 import com.utn.viewmodellivedataexample.R
 
-class fragment1 : Fragment() {
+class Fragment1 : Fragment() {
 
     companion object {
-        fun newInstance() = fragment1()
+        fun newInstance() = Fragment1()
     }
 
     lateinit var v: View
@@ -40,7 +41,7 @@ class fragment1 : Fragment() {
         ptInput = v.findViewById(R.id.etInput)
         btnGo2 = v.findViewById(R.id.btn_go2)
 
-        ptInput.setText("test");
+        ptInput.setText("test")
 
         return v
     }
@@ -50,14 +51,11 @@ class fragment1 : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity()).get(Fragment1ViewModel::class.java)
 
-        // TODO: Use the ViewModel
-
-
         viewModel.name.observe(viewLifecycleOwner, Observer { result ->
             txtCartel.text = result.toString()
-            val action2 = fragment1Directions.actionFragment1ToFragment2();
-            v.findNavController().navigate(action2)
         })
+
+        ptInput.setText(viewModel.name.value)
     }
 
 
@@ -65,13 +63,13 @@ class fragment1 : Fragment() {
         super.onStart()
 
         btnChange.setOnClickListener {
+            val action2 = Fragment1Directions.actionFragment1ToFragment2();
+            v.findNavController().navigate(action2)
             viewModel.changeName()
-            /*val action2 = fragment1Directions.actionFragment1ToFragment2();
-            v.findNavController().navigate(action2)*/
         }
 
         btnGo2.setOnClickListener{
-            val action3 = fragment1Directions.actionFragment1ToBlankFragment()
+            val action3 = Fragment1Directions.actionFragment1ToBlankFragment()
             v.findNavController().navigate(action3)
         }
     }

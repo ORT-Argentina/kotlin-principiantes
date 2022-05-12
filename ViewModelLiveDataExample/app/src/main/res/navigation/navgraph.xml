@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/fragment1"
-        android:name="com.utn.fragments.fragment1"
+        android:name="com.utn.fragments.Fragment1"
         android:label="fragment1_fragment"
         tools:layout="@layout/fragment1_fragment" >
         <action
-            android:id="@+id/action_fragment1_to_fragment2"
-            app:destination="@id/fragment2" />
-        <action
             android:id="@+id/action_fragment1_to_blankFragment"
             app:destination="@id/blankFragment" />
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/fragment2" />
     </fragment>
     <fragment
         android:id="@+id/fragment2"
-        android:name="com.utn.fragments.fragment2"
+        android:name="com.utn.fragments.Fragment2"
         android:label="fragment2_fragment"
         tools:layout="@layout/fragment2_fragment" >
         <action
