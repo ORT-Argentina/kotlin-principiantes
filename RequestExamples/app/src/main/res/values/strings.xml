@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Request Examples</string>
-    <string name="request_url_sample">https://simplifiedcoding.net/demos/</string>
+    <string name="request_url_sample">https://gateway.marvel.com/</string>
 </resources>

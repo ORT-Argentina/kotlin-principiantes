@@ -44,6 +44,9 @@ dependencies {
     //GSON - Json Fácil
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
+    //Interceptor de HTTP
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttpLoggingVersion"
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
