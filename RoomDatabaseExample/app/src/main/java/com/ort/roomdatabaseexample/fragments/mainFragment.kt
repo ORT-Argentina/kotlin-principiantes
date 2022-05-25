@@ -13,7 +13,7 @@ import com.ort.roomdatabaseexample.R
 import com.ort.roomdatabaseexample.database.appDatabase
 import com.ort.roomdatabaseexample.database.userDao
 import com.ort.roomdatabaseexample.entities.User
-import com.wajahatkarim3.roomexplorer.RoomExplorer
+//import com.wajahatkarim3.roomexplorer.RoomExplorer
 
 
 class mainFragment : Fragment() {
@@ -62,6 +62,7 @@ class mainFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
+
         db = appDatabase.getAppDataBase(v.context)
         userDao = db?.userDao()
 
@@ -90,7 +91,7 @@ class mainFragment : Fragment() {
         }
 
         btnDebug.setOnClickListener {
-            RoomExplorer.show(context, appDatabase::class.java, "myDB")
+            //RoomExplorer.show(context, appDatabase::class.java, "myDB")
 
         }
     }

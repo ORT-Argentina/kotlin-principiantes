@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "837116675322",
+    "firebase_url": "https://ort-tp3-default-rtdb.firebaseio.com",
     "project_id": "ort-tp3",
     "storage_bucket": "ort-tp3.appspot.com"
   },

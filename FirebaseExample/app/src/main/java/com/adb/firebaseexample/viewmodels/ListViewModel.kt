@@ -1,4 +1,4 @@
-package com.adb.firebaseexample.fragments
+package com.adb.firebaseexample.viewmodels
 
 import androidx.lifecycle.ViewModel
 import com.manadigital.recyclerview1.entities.Mascota
@@ -17,6 +17,4 @@ class ListViewModel : ViewModel() {
         mascotas.add(Mascota("Carlos",Mascota.Constants.typeGato,"Pardo",7,"mascotas.com"))
         mascotas.add(Mascota("David",Mascota.Constants.typeGato,"Arlequin",8,"mascotas.com"))
     }
-
-
 }

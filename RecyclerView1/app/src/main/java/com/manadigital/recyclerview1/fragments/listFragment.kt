@@ -55,8 +55,10 @@ class listFragment : Fragment() {
         }
 
         //Configuración Obligatoria
+
         recContactos.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(context)
+
         recContactos.layoutManager = linearLayoutManager
 
 
