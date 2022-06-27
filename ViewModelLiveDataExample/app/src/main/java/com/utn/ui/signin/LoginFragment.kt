@@ -28,6 +28,10 @@ class LoginFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         // TODO: Use the ViewModel
+
+        var test : Int = 1
+
+
     }
 
 }
