@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/secondary_nav"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="ar.edu.ort.myapplication.fragments.home"
+        android:label="home" />
+    <fragment
+        android:id="@+id/notification"
+        android:name="ar.edu.ort.myapplication.fragments.notification"
+        android:label="notification" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="ar.edu.ort.myapplication.fragments.profile"
+        android:label="profile" />
+</navigation>
