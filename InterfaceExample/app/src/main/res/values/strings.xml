@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">InterfaceExample</string>
+    <string name="search_message">Search</string>
+    <string name="navigation_text">Navegar a siguiente</string>
+</resources>

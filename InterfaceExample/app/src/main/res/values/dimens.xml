@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_horizontal_margin">10dp</dimen>
+    <dimen name="items_spacing_margin">20dp</dimen>
+    <dimen name="search_title_size">30sp</dimen>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/app_horizontal_margin"
+    android:layout_marginEnd="@dimen/app_horizontal_margin"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/search_message"
+        android:textColor="@color/black"
+        android:textSize="@dimen/search_title_size" />
+
+    <EditText
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/items_spacing_margin"
+        android:background="@drawable/box_shape"
+        android:layout_weight="0.04"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="@string/search_message"
+        android:layout_marginTop="@dimen/items_spacing_margin"
+        android:layout_weight="0.02"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
