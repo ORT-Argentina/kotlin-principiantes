@@ -49,4 +49,7 @@ dependencies {
 
     // Jetpack Compose Integration
     implementation "androidx.navigation:navigation-compose:$nav_version"
+
+    //Documentación de Google Bibliotecas compatibles
+    implementation "com.android.support:support-core-utils:31.0.0"
 }
