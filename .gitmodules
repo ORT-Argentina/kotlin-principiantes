@@ -4,3 +4,6 @@
 [submodule "sunflower"]
 	path = sunflower
 	url = https://github.com/android/sunflower.git
+[submodule "aachartcore-kotlin"]
+	path = "aa-chart-core-kotlin"
+	url = https://github.com/AAChartModel/AAChartCore-Kotlin.git
