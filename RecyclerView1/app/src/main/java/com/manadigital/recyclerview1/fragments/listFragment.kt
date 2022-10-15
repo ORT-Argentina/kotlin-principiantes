@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
@@ -12,8 +14,9 @@ import com.google.android.material.snackbar.Snackbar
 import com.manadigital.recyclerview1.R
 import com.manadigital.recyclerview1.entities.Contacto
 import com.manadigital.recyclerview1.adapters.ContactoListAdapter
+import com.manadigital.recyclerview1.listener.OnViewItemClickedListener
 
-class listFragment : Fragment() {
+class listFragment : Fragment(), OnViewItemClickedListener {
 
     lateinit var v: View
 
@@ -36,6 +39,7 @@ class listFragment : Fragment() {
 
         v =  inflater.inflate(R.layout.list_fragment, container, false)
 
+
         recContactos = v.findViewById(R.id.rec_contactos)
 
         return v
@@ -45,13 +49,13 @@ class listFragment : Fragment() {
         super.onStart()
 
         //Creo la Lista Dinamica
-        for (i in 1..5) {
-            contactos.add(Contacto("Pedro.$i",26, Contacto.Constants.cursoA))
-            contactos.add(Contacto("Rodolfo.$i",30, Contacto.Constants.cursoA))
-            contactos.add(Contacto("Emilio.$i",28, Contacto.Constants.cursoB))
-            contactos.add(Contacto("Luis.$i",37, Contacto.Constants.cursoB))
-            contactos.add(Contacto("Carlos.$i", 42, Contacto.Constants.cursoC))
-            contactos.add(Contacto("David.$i",21, Contacto.Constants.cursoC))
+        for (i in 1..10) {
+            contactos.add(Contacto("Pedro",26, Contacto.Constants.cursoA, ""))
+            contactos.add(Contacto("Rodolfo",30, Contacto.Constants.cursoA, ""))
+            contactos.add(Contacto("Emilio",28, Contacto.Constants.cursoB, ""))
+            contactos.add(Contacto("Luis",37, Contacto.Constants.cursoB, ""))
+            contactos.add(Contacto("Carlos", 42, Contacto.Constants.cursoC, ""))
+            contactos.add(Contacto("David",21, Contacto.Constants.cursoC, ""))
         }
 
         //Configuración Obligatoria
@@ -61,20 +65,15 @@ class listFragment : Fragment() {
 
         recContactos.layoutManager = linearLayoutManager
 
-
-        contactoListAdapter = ContactoListAdapter(contactos) { x ->
-            onItemClick(x)
-        }
+        contactoListAdapter = ContactoListAdapter(contactos, this)
 
         recContactos.adapter = contactoListAdapter
 
     }
 
-     fun onItemClick ( position : Int ) : Boolean{
-        Snackbar.make(v,position.toString(),Snackbar.LENGTH_SHORT).show()
-         return true
+    override fun onViewItemDetail(contacto: Contacto) {
+        val action = listFragmentDirections.actionListFragmentToViewItem(contacto)
+        findNavController().navigate(action)
+        Snackbar.make(v,contacto.nombre,Snackbar.LENGTH_SHORT).show()
     }
-
-
-
 }
