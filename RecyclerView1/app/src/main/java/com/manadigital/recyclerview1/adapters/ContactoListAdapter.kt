@@ -1,21 +1,20 @@
 package com.manadigital.recyclerview1.adapters
 
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.manadigital.recyclerview1.R
 import com.manadigital.recyclerview1.entities.Contacto
-import com.manadigital.recyclerview1.fragments.BlankFragment
 import com.manadigital.recyclerview1.holders.ContactoHolder
+import com.manadigital.recyclerview1.listener.OnViewItemClickedListener
 
 class ContactoListAdapter(
-    private var contactsList: MutableList<Contacto>,
-    val onItemClick: (Int) -> Boolean
+    private val contactsList: MutableList<Contacto>,
+    private val onItemClick: OnViewItemClickedListener
 ) : RecyclerView.Adapter<ContactoHolder>() {
 
-    override fun getItemCount(): Int {
-        return contactsList.size
-    }
+    override fun getItemCount() = contactsList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactoHolder {
         val view =  LayoutInflater.from(parent.context).inflate(R.layout.item_contactos,parent,false)
@@ -23,17 +22,14 @@ class ContactoListAdapter(
     }
 
     override fun onBindViewHolder(holder: ContactoHolder, position: Int) {
-
-        holder.setName(contactsList[position].nombre)
+        val contact = contactsList[position]
+        holder.setName(TextUtils.concat(contact.nombre, " (", contact.edad.toString(), ")").toString())
+        holder.setCurso(contact.curso)
+        holder.setOrden(position)
 
         holder.getCardLayout().setOnClickListener{
-            onItemClick(position)
+            onItemClick.onViewItemDetail(contact)
         }
-    }
-
-    fun setData(newData: ArrayList<Contacto>) {
-        this.contactsList = newData
-        this.notifyDataSetChanged()
     }
 }
 

@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.manadigital.recyclerview1.R
+import org.w3c.dom.Text
 
 class ContactoHolder (v: View) : RecyclerView.ViewHolder(v) {
 
@@ -20,8 +21,18 @@ class ContactoHolder (v: View) : RecyclerView.ViewHolder(v) {
         txt.text = name
     }
 
+    fun setCurso(curso: String){
+        val txt: TextView = view.findViewById(R.id.txtCurso)
+        txt.text = curso
+    }
+
     fun getCardLayout (): CardView {
         return view.findViewById(R.id.card_package_item)
+    }
+
+    fun setOrden(orden: Int){
+        val txt: TextView = view.findViewById(R.id.txtOrden)
+        txt.text = orden.toString()
     }
 
 //

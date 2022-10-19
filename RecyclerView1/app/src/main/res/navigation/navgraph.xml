@@ -9,5 +9,18 @@
         android:id="@+id/listFragment"
         android:name="com.manadigital.recyclerview1.fragments.listFragment"
         android:label="list_fragment"
-        tools:layout="@layout/list_fragment"/>
+        tools:layout="@layout/list_fragment">
+        <action
+            android:id="@+id/action_listFragment_to_viewItem"
+            app:destination="@id/viewItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewItem"
+        android:name="com.manadigital.recyclerview1.fragments.ViewItem"
+        android:label="view_item_info"
+        tools:layout="@layout/view_item_info" >
+        <argument
+            android:name="contacto"
+            app:argType="com.manadigital.recyclerview1.entities.Contacto" />
+    </fragment>
 </navigation>

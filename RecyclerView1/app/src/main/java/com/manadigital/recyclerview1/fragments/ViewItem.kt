@@ -5,10 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.manadigital.recyclerview1.R
 
 
-class BlankFragment : Fragment() {
+class ViewItem : Fragment() {
+
+    lateinit var vista: View
+    lateinit var info: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +25,19 @@ class BlankFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank, container, false)
+        vista = inflater.inflate(R.layout.view_item_info, container, false)
+        info = vista.findViewById(R.id.txtInfo)
+        return vista;
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        arguments?.let {
+            val contact = ViewItemArgs.fromBundle(it).contacto
+
+            info.text = contact.nombre
+        }
     }
 
 }
