@@ -8,7 +8,7 @@ import com.ort.edu.challengepractica.model.Product
 interface OnProductClickedListener {
 
     /**
-     * Se invoca cuando se selecciona un producto de la lista
+     * Se invoca cuando se selecciona un produOnProductClickedListener cto de la lista
      */
     fun onProductSelected(product: Product)
 }

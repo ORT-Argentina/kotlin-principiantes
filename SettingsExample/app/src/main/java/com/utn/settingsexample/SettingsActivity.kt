@@ -12,25 +12,22 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.settings_activity)
 
 
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.settings, SettingsFragment())
-            .commit()
+        supportFragmentManager.beginTransaction().replace(R.id.settings, SettingsFragment()).commit()
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
     }
 
+
+
+
+
+
+
     class SettingsFragment : PreferenceFragmentCompat() {
 
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-            setPreferencesFromResource(R.xml.user_setting, rootKey)
+            setPreferencesFromResource(R.xml.root_preferences, rootKey)
         }
-
-        /*override fun onPreferenceChange(
-            preference: Preference,
-            newValue: Any
-        ): Boolean {
-            return true
-        }*/
     }
 }

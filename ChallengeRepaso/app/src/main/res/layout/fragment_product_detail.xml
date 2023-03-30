@@ -22,7 +22,6 @@
         tools:text="$600"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:fontFamily="@font/be_vietnam_semibold"
         app:layout_constraintTop_toBottomOf="@id/product_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

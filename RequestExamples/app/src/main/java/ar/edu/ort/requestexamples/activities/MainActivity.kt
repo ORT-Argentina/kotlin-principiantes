@@ -1,13 +1,14 @@
 package ar.edu.ort.requestexamples.activities
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import ar.edu.ort.requestexamples.R
 import ar.edu.ort.requestexamples.api.MarvelService
-import ar.edu.ort.requestexamples.data.CharacterResponse
 import ar.edu.ort.requestexamples.data.MarvelResponse
+import ar.edu.ort.requestexamples.entities.MarvelComic
 import ar.edu.ort.requestexamples.entities.MarvelHereo
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
@@ -32,34 +33,48 @@ class MainActivity : AppCompatActivity() {
         //Create Service
         val api = MarvelService.create(baseURL)
 
+
         //Call Request
-        api.getCharacters(apiKey, hash)?.enqueue(object : Callback<MarvelResponse<CharacterResponse?>?> {
+        api.getCharacters(apiKey, hash)?.enqueue(object : Callback<MarvelResponse<MarvelHereo?>?> {
             override fun onResponse(
-                call: Call<MarvelResponse<CharacterResponse?>?>,
-                response: Response<MarvelResponse<CharacterResponse?>?>
+                call: Call<MarvelResponse<MarvelHereo?>?>,
+                response: Response<MarvelResponse<MarvelHereo?>?>
             ) {
-                val response: MarvelResponse<CharacterResponse?>? = (response.body() as MarvelResponse<CharacterResponse?>)!!
+                if( response.isSuccessful() )
+                {
 
-                val characters: MutableList<MarvelHereo>? = response?.data?.results?.toMutableList()
+                    val response: MarvelResponse<MarvelHereo?>? = (response.body() as MarvelResponse<MarvelHereo?>)!!
 
-                val heroes = arrayOfNulls<String>(characters?.size ?: 0)
+                    val characters: MutableList<MarvelHereo>? = (response?.data?.results as List<MarvelHereo>).toMutableList()
 
-                if (characters != null) {
-                    for (i in characters.indices) {
-                        heroes[i] = characters[i].name
+                    val heroes = arrayOfNulls<String>(characters?.size ?: 0)
+
+                    if (characters != null) {
+                        for (i in characters.indices) {
+                            heroes[i] = characters[i].name
+                        }
                     }
-                }
 
-                listView.adapter = ArrayAdapter(
-                    applicationContext,
-                    android.R.layout.simple_list_item_1,
-                    heroes
-                )
+                    Log.d("test", "test")
+
+                    listView.adapter = ArrayAdapter(
+                        applicationContext,
+                        android.R.layout.simple_list_item_1,
+                        heroes
+                    )
+
+
+
+                }else{
+                    Snackbar.make(findViewById(R.id.listView), response.errorBody().toString(), Snackbar.LENGTH_LONG).show()
+                }
             }
 
-            override fun onFailure(call: Call<MarvelResponse<CharacterResponse?>?>, t: Throwable) {
+            override fun onFailure(call: Call<MarvelResponse<MarvelHereo?>?>, t: Throwable) {
                 Snackbar.make(findViewById(R.id.listView), t.message.toString(), Snackbar.LENGTH_LONG).show()
             }
         })
+
+        Snackbar.make(findViewById(R.id.listView), "Metodo onCreate Ya termino", Snackbar.LENGTH_LONG).show()
     }
 }

@@ -14,7 +14,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/action_add"
-        android:icon="@drawable/add"
+        android:icon="@drawable/ic_launcher_foreground"
         android:title="add"
         app:showAsAction="ifRoom" />
 

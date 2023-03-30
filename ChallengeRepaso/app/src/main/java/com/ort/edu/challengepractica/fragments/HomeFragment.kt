@@ -41,11 +41,15 @@ class HomeFragment : Fragment(), OnProductClickedListener {
         productsRecyclerView = view.findViewById(R.id.product_recyclerview)
         title = view.findViewById(R.id.home_title)
 
+        
+
         // Pongo el nombre del usuario en el titulo.
         // Advertencia: Al momento de mostrar un texto al usuario siempre usar un String resource. Nunca hardcodear de
         // esta manera.
         title.text = "Hola, ${UserSession.userName}"
         fillProductList()
+
+
     }
 
     /**

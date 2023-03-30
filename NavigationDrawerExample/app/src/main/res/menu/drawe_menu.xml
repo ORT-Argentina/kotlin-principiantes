@@ -2,30 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <group
-        android:id="@+id/grp_1"
-        android:checkableBehavior="single">
+    <item
+        android:id="@+id/fragment1"
+        android:icon="@drawable/iconbatman"
+        android:title="Batman" />
 
-        <item
-            android:id="@+id/fragment1"
-            android:icon="@drawable/iconbatman"
-            android:title="Fragment1" />
+    <item
+        android:id="@+id/fragment2"
+        android:icon="@drawable/iconjoker"
+        android:title="Joker" />
 
-        <item
-            android:id="@+id/fragment2"
-            android:icon="@drawable/iconjoker"
-            android:title="Fragment2" />
+    <item
+        android:id="@+id/fragment3"
+        android:icon="@drawable/iconpenguin"
+        android:title="Fragment3" />
 
-        <item
-            android:id="@+id/fragment3"
-            android:icon="@drawable/iconpenguin"
-            android:title="Fragment3" />
-
-        <item
-            android:id="@+id/test"
-            android:icon="@drawable/iconpenguin"
-            android:title="noNav" />
-
-    </group>
 
 </menu>

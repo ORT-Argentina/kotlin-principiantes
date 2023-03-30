@@ -30,24 +30,24 @@ class MainActivity : AppCompatActivity() {
         nav_view.setupWithNavController(navController)
 
         //nav_view.setupWithNavController(navController)
-        //NavigationUI.setupActionBarWithNavController(this, navController, drawer_layout_id)
+        NavigationUI.setupActionBarWithNavController(this, navController, drawer_layout_id)
 
 //        //Resolución del Challenge
 //
 //        //Creo una configuración para Toolbar
         appBarConfiguration = AppBarConfiguration(
-            topLevelDestinationIds = setOf(),
-            /*topLevelDestinationIds = setOf(
+            //topLevelDestinationIds = setOf(),
+            topLevelDestinationIds = setOf(
                 R.id.fragment1,
                 R.id.fragment2,
                 R.id.fragment3
-            ),*/
+            ),
             fallbackOnNavigateUpListener = ::onSupportNavigateUp
 
         )
 //
 //        //Seteo la configuración
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        //setupActionBarWithNavController(navController, appBarConfiguration)
 //
 //        //Dejo un lisener para cuando se produce el cambio de destino unicamente me reemplace el icono.
         navController.addOnDestinationChangedListener { _, _, _ ->
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
     }*/
 
     override fun onSupportNavigateUp(): Boolean {
-        //Fuezo al boton de navegación de la toolbar que solo abra el menú Drawer
+        /*//Fuezo al boton de navegación de la toolbar que solo abra el menú Drawer
         if (drawer_layout_id.isDrawerOpen(GravityCompat.START)) {
             drawer_layout_id.closeDrawer(GravityCompat.START)
         } else {
@@ -68,8 +68,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         //Cancelo la navegación
-        //return NavigationUI.navigateUp(navController, drawer_layout_id)
-        return false
+        return NavigationUI.navigateUp(navController, drawer_layout_id)
+        //return false
+       // return true;*/
+       return NavigationUI.navigateUp(navController, drawer_layout_id)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

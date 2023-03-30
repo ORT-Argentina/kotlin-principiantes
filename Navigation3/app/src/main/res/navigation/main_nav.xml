@@ -49,7 +49,7 @@
             app:popUpTo="@id/fragmento3"
             app:popUpToInclusive="true" />
         <argument
-            android:name="dato"
+            android:name="dato_parcel"
             app:argType="ar.edu.ort.navigation3.Entities.Dato" />
     </fragment>
 </navigation>

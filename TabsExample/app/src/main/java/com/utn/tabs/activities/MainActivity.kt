@@ -1,7 +1,8 @@
-package com.utn.tabs
+package com.utn.tabs.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.utn.tabs.R
 
 class MainActivity : AppCompatActivity() {
 

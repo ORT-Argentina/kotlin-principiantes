@@ -1,4 +1,4 @@
-package ar.edu.ort.myapplication
+package com.utn.settingsexample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

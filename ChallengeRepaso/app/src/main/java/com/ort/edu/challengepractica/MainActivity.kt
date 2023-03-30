@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         navHostFragment.navController.addOnDestinationChangedListener { _, destination, arguments ->
 
             // Si mi destino es el login entonces oculto la barra inferior. Caso contrario la muestro
+
             if (destination.id == R.id.loginFragment) {
                 bottomNavView.visibility = View.GONE
             } else {

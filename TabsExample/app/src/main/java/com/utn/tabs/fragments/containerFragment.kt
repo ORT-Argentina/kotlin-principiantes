@@ -48,15 +48,16 @@ class containerFragment : Fragment() {
         TabLayoutMediator(tabLayout, viewPager, TabLayoutMediator.TabConfigurationStrategy { tab, position ->
             when (position) {
                 0 -> {
-                    tab.text = "Tab #1"
+                    tab.text = "Tab1"
                     tab.setIcon(R.drawable.tabicon)
                 }
                 1 -> {
-                    tab.text = "Tab #2"
-                    /*tab.orCreateBadge.isVisible = true
-                    tab.orCreateBadge.number = 10*/
+                    tab.text = "Tab2"
+                    tab.orCreateBadge.isVisible = true
+                    tab.orCreateBadge.number = 10
                 }
-                2 -> tab.text = "Tab #3"
+                2 -> tab.text = "Tab3"
+                3 -> tab.text = "Tab5"
                 else -> tab.text = "undefined"
             }
         }).attach()

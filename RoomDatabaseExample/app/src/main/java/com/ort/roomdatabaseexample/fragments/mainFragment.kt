@@ -62,6 +62,7 @@ class mainFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
+        db = appDatabase.getAppDataBase(v.context)
 
         db = appDatabase.getAppDataBase(v.context)
         userDao = db?.userDao()

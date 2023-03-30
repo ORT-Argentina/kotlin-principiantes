@@ -24,7 +24,7 @@
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        app:itemBackground="@color/colorPrimaryDark"
+        app:itemBackground="@color/colorAccent"
         app:itemHorizontalTranslationEnabled="true"
         app:labelVisibilityMode="auto"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nav_host"
-        app:menu="@menu/bottom_bar" >
+        app:menu="@menu/bottom_bar">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>

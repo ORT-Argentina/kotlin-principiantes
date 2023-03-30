@@ -39,7 +39,7 @@ class Fragmento3 : Fragment() {
 
         activity?.title = "Fragmento3"
 
-        val dato = Fragmento3Args.fromBundle(requireArguments()).dato
+        val dato = Fragmento3Args.fromBundle(requireArguments()).datoParcel
         txtView.text = dato.undato
 
         btn1.setOnClickListener {

@@ -3,9 +3,7 @@ package com.utn.tabs.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.utn.tabs.fragments.fragment1
-import com.utn.tabs.fragments.fragment2
-import com.utn.tabs.fragments.fragment3
+import com.utn.tabs.fragments.*
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
 
@@ -15,6 +13,7 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
             0 -> fragment1()
             1 -> fragment2()
             2 -> fragment3()
+            3 -> fragment5()
             else -> fragment1()
         }
     }
@@ -24,6 +23,6 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
     }
 
     companion object {
-        private const val TAB_COUNT = 3
+        private const val TAB_COUNT = 4
     }
 }

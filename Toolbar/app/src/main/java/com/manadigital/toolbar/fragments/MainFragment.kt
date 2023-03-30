@@ -53,20 +53,21 @@ class MainFragment : Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+   override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         val id = when(item.itemId) {
 
-            R.id.action_add -> Snackbar.make(v, R.id.action_add.toString(), Snackbar.LENGTH_SHORT).show()
+            R.id.action_add -> Snackbar.make(v, "Action to Add", Snackbar.LENGTH_SHORT).show()
 
-            R.id.action_fav -> Snackbar.make(v, R.id.action_fav.toString(), Snackbar.LENGTH_SHORT).show()
+            R.id.action_fav -> Snackbar.make(v, "Action to Fav", Snackbar.LENGTH_SHORT).show()
 
-            R.id.test -> Snackbar.make(v, R.id.test.toString(), Snackbar.LENGTH_LONG).show()
+            R.id.test -> Snackbar.make(v, "Click Test", Snackbar.LENGTH_LONG).show()
 
             else -> Snackbar.make(v, "else", Snackbar.LENGTH_SHORT).show()
 
             //else -> ""
         }
+
         return super.onOptionsItemSelected(item)
-    }
+   }
 }

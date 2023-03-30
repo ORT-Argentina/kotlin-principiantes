@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.ort.edu.challengepractica.R
 
@@ -27,24 +29,31 @@ class LoginFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_login, container, false)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Fragmento
         val navController = findNavController()
+
+        //Activity
+        //(supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment).navController
+
         val continueButton = view.findViewById<Button>(R.id.login_button)
+
         userEditText = view.findViewById(R.id.username_input)
         passwordEditText = view.findViewById(R.id.password_input)
 
         // Establezco un listener para escuchar cualquier click en el boton
         continueButton.setOnClickListener {
-
             // Navego hacia la home
             navController.navigate(
+
                 LoginFragmentDirections.actionLoginFragmentToHomeFragment(
                     userEditText.text.toString(),
-                    passwordEditText.text.toString()
+                            passwordEditText.text.toString()
                 )
             )
         }

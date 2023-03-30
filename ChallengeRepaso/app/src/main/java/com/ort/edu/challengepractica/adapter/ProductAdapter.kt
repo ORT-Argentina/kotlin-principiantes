@@ -31,6 +31,7 @@ class ProductAdapter(
 
         // Establezco un click listener en el itemview del holder. Esto seria, la vista entera del elemento {position}
         // de la lista
+
         holder.itemView.setOnClickListener {
             onProductClickedListener.onProductSelected(product)
         }

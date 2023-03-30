@@ -4,7 +4,7 @@ import androidx.room.*
 import com.ort.roomdatabaseexample.entities.User
 
 @Dao
-public interface userDao {
+interface userDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertPerson(user: User?)

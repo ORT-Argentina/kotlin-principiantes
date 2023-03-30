@@ -8,8 +8,7 @@ import com.ort.roomdatabaseexample.entities.User
 
 
 @Database(entities = [User::class], version = 1, exportSchema = false)
-
-public abstract class appDatabase : RoomDatabase() {
+abstract class appDatabase : RoomDatabase() {
 
     abstract fun userDao(): userDao
 

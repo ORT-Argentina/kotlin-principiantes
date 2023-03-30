@@ -2,6 +2,10 @@ buildscript {
     ext {
         okhttpLoggingVersion = '4.7.2'
     }
+    dependencies {
+        def nav_version = "2.5.2"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+    }
 }
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.

@@ -10,4 +10,13 @@
         android:name="com.utn.tabs.fragments.containerFragment"
         android:label="fragment_container"
         tools:layout="@layout/fragment_container" />
+    <fragment
+        android:id="@+id/fragment5"
+        android:name="com.utn.tabs.fragments.fragment5"
+        android:label="fragment5" />
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.utn.tabs.fragments.fragment2"
+        android:label="fragment_fragment2"
+        tools:layout="@layout/fragment_fragment2" />
 </navigation>

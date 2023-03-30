@@ -2,5 +2,5 @@
     <string name="app_name">Mi aplicación</string>
     <string name="app_title">Mi aplicación</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hola</string>
 </resources>

@@ -3,6 +3,12 @@
 
     <PreferenceCategory app:title="@string/messages_header">
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="night_mode"
+            android:icon=""
+            android:title="Modo Nocturno" />
+
         <EditTextPreference
             app:key="signature_string"
             app:title="@string/signature_title"
@@ -38,6 +44,7 @@
             app:summaryOff="@string/attachment_summary_off"
             app:summaryOn="@string/attachment_summary_on"
             app:title="@string/attachment_title" />
+
 
     </PreferenceCategory>
 
