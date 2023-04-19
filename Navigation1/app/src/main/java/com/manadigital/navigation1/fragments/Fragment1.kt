@@ -26,13 +26,23 @@ class Fragment1 : Fragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+
         //inflater.inflate(R.layout.fragment_fragment1, container, false)
 
         view1 = inflater.inflate(R.layout.fragment_fragment1, container, false)
 
         btnGoToFragment2 = view1.findViewById(R.id.btn_go_to_fragment2)
 
+        btnGoToFragment2.setOnClickListener{
+
+            val action2 = Fragment1Directions.actionFragment1ToFragment2()
+            view1.findNavController().navigate(action2)
+        }
+
         txtInput = view1.findViewById(R.id.txtInput)
+
+
 
         // Inflate the layout for this fragment
         return view1
@@ -44,15 +54,16 @@ class Fragment1 : Fragment() {
     override fun onStart() {
         super.onStart()
 
+
         requireActivity().title = "Prueba"
 
-        btnGoToFragment2.setOnClickListener {
+        /*btnGoToFragment2.setOnClickListener {
 
-            val objeto1 = Cosa(txtInput.text.toString())
+            //val objeto1 = Cosa(txtInput.text.toString())
 
-            val action2 = Fragment1Directions.actionFragment1ToFragment2(objeto1)
+            val action2 = Fragment1Directions.actionFragment1ToFragment2()
             view1.findNavController().navigate(action2)
 
-        }
+        }*/
     }
 }

@@ -20,11 +20,6 @@
         tools:layout="@layout/fragment_fragment2" >
         <action
             android:id="@+id/action_fragment2_to_fragment1"
-            app:destination="@id/fragment1"
-            app:popUpTo="@id/fragment2"
-            app:popUpToInclusive="true" />
-        <argument
-            android:name="uncosa"
-            app:argType="com.manadigital.navigation1.Entities.Cosa" />
+            app:destination="@id/fragment1" />
     </fragment>
 </navigation>

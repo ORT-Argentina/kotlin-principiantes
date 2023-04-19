@@ -34,9 +34,9 @@ class Fragment2 : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        val lamismacosa = Fragment2Args.fromBundle(requireArguments()).uncosa
+        //val lamismacosa = Fragment2Args.fromBundle(requireArguments()).uncosa
 
-        title.text = lamismacosa.untexto
+        //title.text = lamismacosa.untexto
 
         val action = Fragment2Directions.actionFragment2ToFragment1()
 
