@@ -19,6 +19,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         btnSplashScreenNav.setOnClickListener {
             //val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:911"))
+
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
