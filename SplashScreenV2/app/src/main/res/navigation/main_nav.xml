@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/firstFragment">
+    app:startDestination="@id/listFragment">
 
     <fragment
         android:id="@+id/firstFragment"
@@ -37,4 +37,9 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.splashscreenv2.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.splashscreenv2.fragments.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
 </navigation>
