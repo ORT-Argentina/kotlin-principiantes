@@ -12,10 +12,15 @@
         tools:layout="@layout/fragment_first" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
+            app:destination="@id/secondFragment"
+            app:popUpTo="@id/firstFragment"
+            app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_firstFragment_to_secondFragment2"
-            app:destination="@id/secondFragment" />
+            android:id="@+id/action_firstFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
@@ -24,6 +29,20 @@
         tools:layout="@layout/fragment_second" >
         <action
             android:id="@+id/action_secondFragment_to_firstFragment"
-            app:destination="@id/firstFragment" />
+            app:destination="@id/firstFragment"
+            app:popUpTo="@id/secondFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="unAlumno"
+            app:argType="ar.edu.ort.tp3.myapplication.entities.Alumno" />
     </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="ar.edu.ort.tp3.myapplication.fragments.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ar.edu.ort.tp3.myapplication.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>
