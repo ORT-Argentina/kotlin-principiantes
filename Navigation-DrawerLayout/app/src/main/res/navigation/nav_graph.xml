@@ -3,21 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/firstFragment">
+    app:startDestination="@id/batman">
 
     <fragment
-        android:id="@+id/firstFragment"
+        android:id="@+id/batman"
         android:name="com.ort.edu.bottomnavbardemo.fragments.FirstFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" />
     <fragment
-        android:id="@+id/thirdFragment"
+        android:id="@+id/penguin"
         android:name="com.ort.edu.bottomnavbardemo.fragments.ThirdFragment"
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" />
     <fragment
-        android:id="@+id/secondFragment"
+        android:id="@+id/joker"
         android:name="com.ort.edu.bottomnavbardemo.fragments.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
+    <fragment
+        android:id="@+id/wolverine"
+        android:name="com.ort.edu.bottomnavbardemo.fragments.WolverineFragment"
+        android:label="fragment_wolverine"
+        tools:layout="@layout/fragment_wolverine" />
 </navigation>

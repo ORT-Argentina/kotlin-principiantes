@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/firstFragment"
-        android:title="Home" />
-    <!--        android:icon="@drawable/ic_details"-->
+    <group android:id="@+id/grp1" >
+        <item
+            android:id="@+id/subtitle"
+            android:title="DC">
+            <menu>
+                <item
+                    android:id="@+id/batman"
+                    android:icon="@drawable/iconbatman"
+                    android:title="Batman" />
+                <item
+                    android:id="@+id/joker"
+                    android:icon="@drawable/iconjoker"
+                    android:title="Joker" />
+                <item
+                    android:id="@+id/penguin"
+                    android:icon="@drawable/iconpenguin"
+                    android:title="Penguin" />
+            </menu>
+        </item>
+    </group>
+    <group >
+        <item
+            android:id="@+id/marvel"
+            android:title="Marvel">
+            <menu>
+            <item
+                android:id="@+id/wolverine"
+                android:icon="@drawable/wolverine"
+                android:title="Wolverine" />
+            </menu>
+        </item>
+    </group>
 
-    <item
-        android:id="@+id/secondFragment"
-        android:title="Settings" />
-
-
-    <item
-        android:id="@+id/thirdFragment"
-        android:title="Buscar" />
 </menu>
