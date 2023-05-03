@@ -6,14 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreenActivity">
 
-
-    <Button
-        android:id="@+id/btnSplashScreenNav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="#F5F2F2"
+        android:backgroundTint="#F5F2F2"
+        android:contentDescription="@string/app_name"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sample_logo"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

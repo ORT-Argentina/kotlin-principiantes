@@ -13,17 +13,13 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-
-        var btnSplashScreenNav = findViewById<Button>(R.id.btnSplashScreenNav)
-
-
-        btnSplashScreenNav.setOnClickListener {
+        Handler().postDelayed({
             //val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:911"))
 
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }
+        }, 3000)
 
     }
 
