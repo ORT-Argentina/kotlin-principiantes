@@ -12,13 +12,13 @@
         tools:layout="@layout/fragment_1" />
 
     <fragment
-        android:id="@+id/fragment2"
+        android:id="@+id/joker"
         android:name="com.adb.bottomnavigationbarexample.fragments.Fragment2"
         android:label="fragment_2"
         tools:layout="@layout/fragment_2" />
 
     <fragment
-        android:id="@+id/fragment3"
+        android:id="@+id/penguin"
         android:name="com.adb.bottomnavigationbarexample.fragments.Fragment3"
         android:label="fragment_3"
         tools:layout="@layout/fragment_3" />

@@ -5,6 +5,8 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D32F2F"
+    android:backgroundTint="#D32F2F"
     tools:context=".fragments.Fragment2">
 
     <!-- TODO: Update blank fragment layout -->
@@ -14,6 +16,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Joker"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

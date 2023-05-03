@@ -5,6 +5,8 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0097A7"
+    android:backgroundTint="#0097A7"
     tools:context=".fragments.Fragment3">
 
     <!-- TODO: Update blank fragment layout -->
