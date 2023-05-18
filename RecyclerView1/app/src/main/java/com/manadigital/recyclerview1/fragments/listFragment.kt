@@ -49,7 +49,7 @@ class listFragment : Fragment(), OnViewItemClickedListener {
         super.onStart()
 
         //Creo la Lista Dinamica
-        for (i in 1..10) {
+            for (i in 1..2) {
             contactos.add(Contacto("Pedro",26, Contacto.Constants.cursoA, ""))
             contactos.add(Contacto("Rodolfo",30, Contacto.Constants.cursoA, ""))
             contactos.add(Contacto("Emilio",28, Contacto.Constants.cursoB, ""))
@@ -59,6 +59,7 @@ class listFragment : Fragment(), OnViewItemClickedListener {
         }
 
         //Configuración Obligatoria
+        requireActivity()
 
         recContactos.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(context)
