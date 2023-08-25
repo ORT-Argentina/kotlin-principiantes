@@ -12,14 +12,15 @@ import javax.inject.Inject
 
 @HiltViewModel
 class QuoteViewModel @Inject constructor(
-    private val getQuotesUseCase: GetQuotesUseCase,
-    private val getRandomQuoteUseCase: GetRandomQuoteUseCase
+    private val getQuotesUseCase: GetQuotesUseCase, //Leer de API
+    private val getRandomQuoteUseCase: GetRandomQuoteUseCase //Leer de la Base
 ) : ViewModel() {
 
     val quoteModel = MutableLiveData<Quote>()
     val isLoading = MutableLiveData<Boolean>()
 
     fun onCreate() {
+        //Aca creo ese objecto
         viewModelScope.launch {
             isLoading.postValue(true)
             val result = getQuotesUseCase()

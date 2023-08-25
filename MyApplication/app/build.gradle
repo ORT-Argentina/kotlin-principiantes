@@ -4,8 +4,8 @@ plugins {
 }
 
 android {
+
     compileSdkVersion 33
-    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "ar.edu.ort.myapplication"
@@ -30,6 +30,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'ar.edu.ort.myapplication'
 }
 
 dependencies {

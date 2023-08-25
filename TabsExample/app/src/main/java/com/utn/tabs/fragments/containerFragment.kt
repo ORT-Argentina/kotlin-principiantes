@@ -42,8 +42,9 @@ class containerFragment : Fragment() {
 
         viewPager.setAdapter(ViewPagerAdapter(requireActivity()))
 
+
         //Toast.makeText(requireActivity(), "Fragmento creado", Toast.LENGTH_SHORT).show()
-        //Snackbar.make(v, "Fragmento creado", Snackbar.LENGTH_SHORT).show()
+        Snackbar.make(v, "Fragmento creado", Snackbar.LENGTH_SHORT).show()
 
         TabLayoutMediator(tabLayout, viewPager, TabLayoutMediator.TabConfigurationStrategy { tab, position ->
             when (position) {

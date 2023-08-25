@@ -38,13 +38,15 @@ class Fragment2 : Fragment() {
         return v
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
         viewModel1 = ViewModelProvider(requireActivity()).get(Fragment1ViewModel::class.java)
 
-        requireActivity().title = viewModel1.name.value.toString()
-        txtNewText.setText(viewModel1.name.value.toString())
+        viewModel1.name.observe(viewLifecycleOwner, androidx.lifecycle.Observer { result ->
+            requireActivity().title = viewModel1.name.value.toString()
+            txtNewText.setText(viewModel1.name.value.toString())
+        })
     }
 
    override fun onStart() {

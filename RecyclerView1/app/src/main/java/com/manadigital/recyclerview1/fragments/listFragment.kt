@@ -74,6 +74,7 @@ class listFragment : Fragment(), OnViewItemClickedListener {
 
     override fun onViewItemDetail(contacto: Contacto) {
         val action = listFragmentDirections.actionListFragmentToViewItem(contacto)
+        this.findNavController().navigate(action)
         findNavController().navigate(action)
         Snackbar.make(v,contacto.nombre,Snackbar.LENGTH_SHORT).show()
     }

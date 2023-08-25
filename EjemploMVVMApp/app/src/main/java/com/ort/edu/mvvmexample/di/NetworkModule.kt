@@ -25,7 +25,6 @@ object NetworkModule {
 
     var client : OkHttpClient = OkHttpClient.Builder().apply {
         addInterceptor(interceptor).addInterceptor(InterceptorCustom)
-
     }.build()
 
     @Singleton

@@ -23,7 +23,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/ic_menu_24dp"
             app:title="@string/title_bar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 

@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import com.ort.edu.retrofitexample.model.Activity
+import com.ort.edu.retrofitexample.model.PaginateResponse
+import com.ort.edu.retrofitexample.model.Pokemon
 import com.ort.edu.retrofitexample.service.ActivityServiceApiBuilder
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,26 +21,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         activityText = findViewById(R.id.activity_text)
         typeText = findViewById(R.id.type_text)
 
-        getActivity()
+        loadPokemon()
+
+
     }
 
-    fun getActivity() {
+    fun loadPokemon() {
         val service = ActivityServiceApiBuilder.create()
 
-        service.getActivity("1234_key").enqueue(object : Callback<Activity> {
-            override fun onResponse(call: Call<Activity>, response: Response<Activity>) {
-                if (response.isSuccessful) {
-                    val activity = response.body()
+        service.getPokemon().enqueue(object : Callback<PaginateResponse<Pokemon>> {
+            override fun onResponse(call: Call<PaginateResponse<Pokemon>>, response: Response<PaginateResponse<Pokemon>>) {
 
-                    activityText.text = activity?.name ?: "Activity no encontrada"
-                    typeText.text = activity?.type ?: "Type no encontrado"
+                if (response.isSuccessful) {
+                    val responsePokemon = response.body()
+
+                    activityText.text = responsePokemon?.count.toString()
+                    typeText.text = responsePokemon?.results?.get(0)?.name.toString()
                 }
             }
 
-            override fun onFailure(call: Call<Activity>, t: Throwable) {
+            override fun onFailure(call: Call<PaginateResponse<Pokemon>>, t: Throwable) {
                 Log.e("Example", t.stackTraceToString())
             }
         })

@@ -5,13 +5,13 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
+import com.ort.edu.mvvmexample.core.Config
 import com.ort.edu.mvvmexample.databinding.ActivityMainBinding
 import com.ort.edu.mvvmexample.ui.viewmodel.QuoteViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     private val quoteViewModel: QuoteViewModel by viewModels()
@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             binding.tvQuote.text = it.quote
             binding.tvAuthor.text = it.author
         })
+
         quoteViewModel.isLoading.observe(this, Observer {
             binding.loading.isVisible = it
         })

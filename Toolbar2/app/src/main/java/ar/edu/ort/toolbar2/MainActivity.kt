@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         val toolbar = findViewById<Toolbar>(R.id.toolbarx)
         setSupportActionBar(toolbar)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
-        menu?.findItem(R.id.menu_opt_shared)?.setEnabled(false)
+        //menu?.findItem(R.id.menu_opt_shared)?.setEnabled(false)
 
         return super.onPrepareOptionsMenu(menu)
     }
