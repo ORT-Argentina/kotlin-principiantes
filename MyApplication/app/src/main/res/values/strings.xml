@@ -3,4 +3,5 @@
     <string name="app_title">Mi aplicación</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hola</string>
+    <string name="activity_login_boton">Aca va el Texto</string>
 </resources>

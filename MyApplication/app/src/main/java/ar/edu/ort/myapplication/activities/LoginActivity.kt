@@ -21,8 +21,9 @@ class LoginActivity : AppCompatActivity() {
 
 
         btnLoginRegister.setOnClickListener{
-            val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:911"))
-            //startActivity(Intent(this, MainActivity::class.java))
+            //val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:911"))
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
             startActivity(intent)
             finish()
         }
