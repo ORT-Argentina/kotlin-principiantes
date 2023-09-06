@@ -13,6 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val btn2 = findViewById<Button>(R.id.button2)
+
+        btn2.setOnClickListener {
+            Snackbar.make(it, "Hello World", Snackbar.LENGTH_LONG).show()
+        }
 
     }
 

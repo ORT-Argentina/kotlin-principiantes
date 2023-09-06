@@ -18,8 +18,7 @@
         <action
             android:id="@+id/action_fragment1_to_fragmento3"
             app:destination="@id/fragmento3"
-            app:popUpTo="@id/fragmento1"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/fragmento2"
@@ -29,8 +28,7 @@
         <action
             android:id="@+id/action_fragmento2_to_fragment1"
             app:destination="@id/fragmento1"
-            app:popUpTo="@id/fragmento2"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="false" />
         <argument
             android:name="texto"
             app:argType="string" />
@@ -46,8 +44,7 @@
         <action
             android:id="@+id/action_fragmento3_to_fragment1"
             app:destination="@id/fragmento1"
-            app:popUpTo="@id/fragmento3"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="false" />
         <argument
             android:name="dato_parcel"
             app:argType="ar.edu.ort.navigation3.Entities.Dato" />
