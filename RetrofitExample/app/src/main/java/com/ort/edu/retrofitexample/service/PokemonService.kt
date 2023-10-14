@@ -11,6 +11,7 @@ interface PokemonService {
     @GET("api/v2/pokemon")
     fun getPokemon(): Call<PaginateResponse<Pokemon>>
 
+
     @GET("api/v2/ability")
     fun getPokemonAbility(): Call<PaginateResponse<Activity>>
 

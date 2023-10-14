@@ -1,6 +1,3 @@
-[submodule "android-kotlin-notifications-fcm"]
-	path = android-kotlin-notifications-fcm
-	url = https://github.com/googlecodelabs/android-kotlin-notifications-fcm
 [submodule "sunflower"]
 	path = sunflower
 	url = https://github.com/android/sunflower.git

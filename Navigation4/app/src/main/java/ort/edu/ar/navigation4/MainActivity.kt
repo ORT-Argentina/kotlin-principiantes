@@ -1,7 +1,10 @@
 package ort.edu.ar.navigation4
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import ort.edu.ar.navigation4.fragments.Fragment1
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

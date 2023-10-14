@@ -20,7 +20,6 @@ class Contacto(nombre: String?, edad: Int?, curso: String?, urlImage: String?): 
         parcel.readString()
     )
 
-
     class Constants {
         companion object {
             val cursoA = "A"
@@ -56,6 +55,4 @@ class Contacto(nombre: String?, edad: Int?, curso: String?, urlImage: String?): 
             return arrayOfNulls(size)
         }
     }
-
-
 }

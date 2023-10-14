@@ -33,6 +33,7 @@ class Fragment1 : Fragment() {
     override fun onStart() {
         super.onStart()
         val btnNav = v.findViewById<Button>(R.id.btnFragment1Nav)
+
         btnNav.setOnClickListener {
             val clientKtn = Cliente("Martin", 40)
 
@@ -41,6 +42,7 @@ class Fragment1 : Fragment() {
             val action = Fragment1Directions.actionFragment1ToFragmentDos(clientKtn)
             v.findNavController().navigate(action)
         }
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

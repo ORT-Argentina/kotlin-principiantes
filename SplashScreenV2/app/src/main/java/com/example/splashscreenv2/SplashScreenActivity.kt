@@ -16,35 +16,13 @@ class SplashScreenActivity : AppCompatActivity() {
         Handler().postDelayed({
             //val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:911"))
 
+            //Logica Carga Forzada
+
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)
 
-    }
-
-    override fun onStart() {
-        super.onStart()
-    }
-
-    override fun onResume() {
-        super.onResume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-    }
-
-    override fun onStop() {
-        super.onStop()
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
     }
 
 }

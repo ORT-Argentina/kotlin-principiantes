@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.ort.roomdatabaseexample.entities.User
 
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = [User::class], version = 2, exportSchema = false)
 abstract class appDatabase : RoomDatabase() {
 
     abstract fun userDao(): userDao
@@ -22,8 +22,8 @@ abstract class appDatabase : RoomDatabase() {
                     INSTANCE = Room.databaseBuilder(
                         context.applicationContext,
                         appDatabase::class.java,
-                        "myDB"
-                    ).allowMainThreadQueries().build() // No es lo mas recomendable que se ejecute en el mainthread
+                        "userDB"
+                    ).addMigrations().allowMainThreadQueries().build() // No es lo mas recomendable que se ejecute en el mainthread
                 }
             }
             return INSTANCE

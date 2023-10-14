@@ -7,8 +7,11 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.ort.edu.mvvmexample.core.Config
 import com.ort.edu.mvvmexample.databinding.ActivityMainBinding
+import com.ort.edu.mvvmexample.di.NetworkModule
 import com.ort.edu.mvvmexample.ui.viewmodel.QuoteViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

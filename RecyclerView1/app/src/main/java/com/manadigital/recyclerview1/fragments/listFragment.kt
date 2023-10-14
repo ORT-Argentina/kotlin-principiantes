@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,7 +21,7 @@ class listFragment : Fragment(), OnViewItemClickedListener {
 
     lateinit var recContactos : RecyclerView
 
-    var contactos : MutableList<Contacto> = ArrayList<Contacto>()
+    var contactos : MutableList<Contacto> = ArrayList()
 
     private lateinit var linearLayoutManager: LinearLayoutManager
 
@@ -49,7 +48,7 @@ class listFragment : Fragment(), OnViewItemClickedListener {
         super.onStart()
 
         //Creo la Lista Dinamica
-            for (i in 1..2) {
+            for (i in 1..10) {
             contactos.add(Contacto("Pedro",26, Contacto.Constants.cursoA, ""))
             contactos.add(Contacto("Rodolfo",30, Contacto.Constants.cursoA, ""))
             contactos.add(Contacto("Emilio",28, Contacto.Constants.cursoB, ""))
@@ -63,19 +62,16 @@ class listFragment : Fragment(), OnViewItemClickedListener {
 
         recContactos.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(context)
-
-        recContactos.layoutManager = linearLayoutManager
-
         contactoListAdapter = ContactoListAdapter(contactos, this)
 
+        recContactos.layoutManager = linearLayoutManager
         recContactos.adapter = contactoListAdapter
-
     }
 
     override fun onViewItemDetail(contacto: Contacto) {
         val action = listFragmentDirections.actionListFragmentToViewItem(contacto)
         this.findNavController().navigate(action)
-        findNavController().navigate(action)
+        //findNavController().navigate(action)
         Snackbar.make(v,contacto.nombre,Snackbar.LENGTH_SHORT).show()
     }
 }

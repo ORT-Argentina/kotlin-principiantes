@@ -11,10 +11,8 @@ data class QuoteEntity(
     @ColumnInfo(name = "id") val id: Int = 0,
     @ColumnInfo(name = "quote") val quote: String,
     @ColumnInfo(name = "author") val author: String,
-    @ColumnInfo(name = "category") val category: String,
-    @ColumnInfo(name = "campo_nuevo") val nuevo: String,
-    @ColumnInfo(name = "campo2") val campo2: String,
+    @ColumnInfo(name = "category") val category: String
 )
 
 
-fun Quote.toDatabase() = QuoteEntity(quote = quote, author =  author, category = category, nuevo = "nuevo", campo2 = "campo2")
+fun Quote.toDatabase() = QuoteEntity(quote = quote, author =  author, category = category)

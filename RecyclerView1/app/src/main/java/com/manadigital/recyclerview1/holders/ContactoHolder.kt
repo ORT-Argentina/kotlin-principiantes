@@ -35,6 +35,7 @@ class ContactoHolder (v: View) : RecyclerView.ViewHolder(v) {
         txt.text = orden.toString()
     }
 
+
 //
 //        fun getImageView () : ImageView {
 //            return view.findViewById(R.id.img_item)

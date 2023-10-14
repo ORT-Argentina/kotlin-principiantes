@@ -64,20 +64,19 @@ class mainFragment : Fragment() {
 
         db = appDatabase.getAppDataBase(v.context)
 
-        db = appDatabase.getAppDataBase(v.context)
         userDao = db?.userDao()
 
         btnAdd.setOnClickListener {
-            userDao?.insertPerson(User(i, edtName.text.toString(), edtEmail.text.toString()))
+            userDao?.insertPerson(User(i, edtName.text.toString(), edtEmail.text.toString(), "avatar"))
             i += 1
         }
 
         btnDelete.setOnClickListener {
-            userDao?.delete(User(0, "", ""))
+            userDao?.delete(User(0, "", "", "avatar"))
         }
 
         btnEdit.setOnClickListener {
-            userDao?.updatePerson(User(0, "Juan", "juan@utn.com"))
+            userDao?.updatePerson(User(0, "Juan", "juan@utn.com", "avatar"))
         }
 
         btnSearch.setOnClickListener {

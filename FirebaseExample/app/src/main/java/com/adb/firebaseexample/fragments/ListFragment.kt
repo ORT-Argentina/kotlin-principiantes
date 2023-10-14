@@ -53,15 +53,23 @@ class ListFragment : Fragment() {
     ): View? {
 
         v =  inflater.inflate(R.layout.list_fragment, container, false)
-
         btnAdd = v.findViewById(R.id.btn_add)
-
         recMascotas = v.findViewById(R.id.rec_mascotas)
 
+        prepareFragment()
+
+        return v
+    }
+
+    private fun prepareFragment(){
         recMascotas.setHasFixedSize(true)
         recMascotas.layoutManager = LinearLayoutManager(context)
 
-        return v
+        btnAdd.setOnClickListener(View.OnClickListener {
+            val nuevaMascota = Mascota("Ort",Mascota.Constants.typePerro,"Sabueso",10,"mascotas.com")
+            db.collection("mascotas").document().set(nuevaMascota)
+            db.collection("mascotas").document(nuevaMascota.nombre).set(nuevaMascota)
+        })
     }
 
     override fun onStart() {
@@ -123,7 +131,6 @@ class ListFragment : Fragment() {
         val rootRef = FirebaseFirestore.getInstance()
 
         val query = rootRef.collection("mascotas").orderBy("nombre")
-            //.whereEqualTo("tipo", "GATO")
 
         val options = FirestoreRecyclerOptions.Builder<Mascota>()
             .setQuery(query, Mascota::class.java)
@@ -136,6 +143,8 @@ class ListFragment : Fragment() {
     }
 
     fun checkRecords(){
+
+
         db.collection("mascotas").get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
@@ -144,7 +153,7 @@ class ListFragment : Fragment() {
                         viewModel.initTestList()
 
                         for (mascota in viewModel.mascotas) {
-                            db.collection("mascotas").document(mascota.nombre).set(mascota)
+                            db.collection("mascotas").document().set(mascota)
                         }
                     }
 
@@ -153,6 +162,8 @@ class ListFragment : Fragment() {
                 }
             }
     }
+
+
 }
 
 

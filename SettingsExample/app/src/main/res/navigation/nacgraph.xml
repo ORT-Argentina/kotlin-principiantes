@@ -18,4 +18,5 @@
         android:id="@+id/settingsActivity"
         android:name="com.utn.settingsexample.SettingsActivity"
         android:label="SettingsActivity" />
+
 </navigation>

@@ -6,8 +6,8 @@
         <SwitchPreference
             android:defaultValue="false"
             android:key="night_mode"
-            android:icon=""
-            android:title="Modo Nocturno" />
+            android:title="Agrupar rostros similares"
+            app:summary="Visualizar fotos xxxx" />
 
         <EditTextPreference
             app:key="signature_string"

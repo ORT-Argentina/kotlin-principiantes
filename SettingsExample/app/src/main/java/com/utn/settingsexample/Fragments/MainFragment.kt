@@ -38,13 +38,14 @@ class MainFragment : Fragment() {
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
 
-
         Log.d("Preferencias", prefs.getBoolean("night_mode", false).toString())
         Log.d("Preferencias",prefs.getBoolean("sync",false).toString())
         Log.d("Preferencias",prefs.getBoolean("attachment",false).toString())
         Log.d("Preferencias",prefs.getString("reply_string",""))
         Log.d("Preferencias",prefs.getString("signature_string","default signature"))
         Log.d("Preferencias",prefs.getString("edit_text_preference_1","aca no hay nada"))
+
+        val nightMode = prefs.getBoolean("night_mode_2", false)
 
         btnSettings.setOnClickListener {
 
