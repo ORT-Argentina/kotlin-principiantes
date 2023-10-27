@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- app_bar_main.xml -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.views.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="" >
+
+        <!-- Add your logo ImageView -->
+        <ImageView
+            android:layout_width="167dp"
+            android:layout_height="28dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/avatar_car"
+            android:contentDescription="@string/logo"
+            android:layout_gravity="end" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

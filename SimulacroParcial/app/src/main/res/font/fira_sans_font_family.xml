@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="900"
+        app:font="@font/firablack" />
+
+    <font
+        app:fontStyle="italic"
+        app:fontWeight="900"
+        app:font="@font/firablackitalic" />
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="700"
+        app:font="@font/firabold" />
+
+    <font
+        app:fontStyle="italic"
+        app:fontWeight="700"
+        app:font="@font/firabolditalic" />
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="800"
+        app:font="@font/firaextrabold" />
+
+    <font
+        app:fontStyle="italic"
+        app:fontWeight="800"
+        app:font="@font/firaextrabolditalic" />
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="200"
+        app:font="@font/firaextralight" />
+
+    <font
+        app:fontStyle="italic"
+        app:fontWeight="200"
+        app:font="@font/firaextralightitalic" />
+
+    <font
+        app:fontStyle="italic"
+        app:fontWeight="400"
+        app:font="@font/firaitalic" />
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="300"
+        app:font="@font/firalight" />
+
+    <font
+        app:fontStyle="italic"
+        app:fontWeight="300"
+        app:font="@font/firalightitalic" />
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="500"
+        app:font="@font/firamedium" />
+
+    <font
+        app:fontStyle="italic"
+        app:fontWeight="500"
+        app:font="@font/firamediumitalic" />
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="400"
+        app:font="@font/firaregular" />
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="600"
+        app:font="@font/firasemibold" />
+
+    <font
+        app:fontStyle="italic"
+        app:fontWeight="600"
+        app:font="@font/firasemibolditalic" />
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="100"
+        app:font="@font/firathin" />
+
+    <font
+        app:fontStyle="italic"
+        app:fontWeight="100"
+        app:font="@font/firathinitalic" />
+
+</font-family>

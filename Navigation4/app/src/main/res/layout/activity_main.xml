@@ -22,7 +22,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/esquema_principal" />
 
-
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="141dp"
+        android:layout_height="35dp"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="416dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

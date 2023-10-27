@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/icono_de_inicio"
+        android:title="Home" />
+    <item
+        android:id="@+id/cars"
+        android:icon="@drawable/vehiculo_de_coche"
+        android:title="Autos" />
+    <item
+        android:id="@+id/buscar"
+        android:icon="@drawable/lupa"
+        android:title="Buscar" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/silueta_de_usuario"
+        android:title="Perfil" />
+</menu>

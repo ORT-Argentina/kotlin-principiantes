@@ -1,0 +1,166 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageyear"
+            app:layout_constraintBottom_toBottomOf="@+id/carYearTextView"
+            app:layout_constraintEnd_toStartOf="@+id/carYearTextView"
+            app:layout_constraintStart_toEndOf="@+id/lineSeparator"
+            app:layout_constraintTop_toTopOf="@+id/carYearTextView"
+            app:srcCompat="@drawable/logo_tipo" />
+
+
+        <TextView
+            android:id="@+id/carBrand"
+            android:layout_width="61dp"
+            android:layout_height="23dp"
+            app:layout_constraintBottom_toTopOf="@+id/carLogoImageView"
+            app:layout_constraintStart_toStartOf="@+id/carLogoImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_conversion_absoluteWidth="38dp" />
+
+        <TextView
+            android:id="@+id/carModelTextView"
+            android:layout_width="61dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="4dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/carLogoImageView"
+            app:layout_constraintEnd_toEndOf="@+id/carLogoImageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/carBrand"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_conversion_absoluteWidth="48dp" />
+
+        <ImageView
+            android:id="@+id/carLogoImageView"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/carlogoimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/lineSeparator"
+            app:layout_constraintHorizontal_bias="0.389"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+
+        <View
+            android:id="@+id/lineSeparator"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageCarDrive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imagecar"
+            app:layout_constraintBottom_toBottomOf="@+id/carDriveTextView"
+            app:layout_constraintEnd_toStartOf="@+id/carYearTextView"
+            app:layout_constraintStart_toEndOf="@+id/lineSeparator"
+            app:layout_constraintTop_toTopOf="@+id/carDriveTextView"
+            app:srcCompat="@drawable/logo_tipo"
+
+            />
+
+        <ImageView
+            android:id="@+id/imageCarTransmission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageCarLogo"
+            app:layout_constraintBottom_toBottomOf="@+id/carTransmission"
+            app:layout_constraintEnd_toStartOf="@+id/carFuelTypeTextView"
+            app:layout_constraintStart_toEndOf="@+id/lineSeparator"
+            app:layout_constraintTop_toTopOf="@+id/carTransmission"
+            app:srcCompat="@drawable/logo_tipo"
+
+            />
+
+
+        <ImageView
+            android:id="@+id/imageCarFuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageCarFuel"
+            app:layout_constraintBottom_toBottomOf="@+id/carFuelTypeTextView"
+            app:layout_constraintEnd_toStartOf="@+id/carFuelTypeTextView"
+            app:layout_constraintStart_toEndOf="@+id/lineSeparator"
+            app:layout_constraintTop_toTopOf="@+id/carFuelTypeTextView"
+            app:srcCompat="@drawable/logo_tipo"
+
+            />
+
+        <TextView
+
+            android:id="@+id/carDriveTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/carTransmission"
+            app:layout_constraintTop_toBottomOf="@+id/carYearTextView" />
+
+        <TextView
+            android:id="@+id/carTransmission"
+            android:layout_width="122dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/carFuelTypeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/carTransmission"
+            app:layout_constraintTop_toBottomOf="@+id/carTransmission"
+            app:layout_constraintVertical_bias="0.108" />
+
+        <TextView
+            android:id="@+id/carYearTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/carTransmission"
+            app:layout_constraintTop_toBottomOf="@+id/carFuelTypeTextView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

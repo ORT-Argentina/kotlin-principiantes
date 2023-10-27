@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.ort.roomdatabaseexample.entities.Customer
 import com.ort.roomdatabaseexample.entities.User
 
 
@@ -22,7 +23,7 @@ abstract class appDatabase : RoomDatabase() {
                     INSTANCE = Room.databaseBuilder(
                         context.applicationContext,
                         appDatabase::class.java,
-                        "userDB"
+                        "whatsappDB"
                     ).addMigrations().allowMainThreadQueries().build() // No es lo mas recomendable que se ejecute en el mainthread
                 }
             }

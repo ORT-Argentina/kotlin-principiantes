@@ -20,10 +20,14 @@ class User (  id : Int, name : String , email : String, avatar: String) {
     @ColumnInfo(name = "avatar")
     var avatar : String
 
+    @ColumnInfo(name = "url")
+    var url : String
+
     init {
         this.id = id
         this.name = name
         this.email = email
         this.avatar = avatar
+        this.url = "https://www.ort.edu.ar"
     }
 }

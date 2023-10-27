@@ -1,11 +1,15 @@
 package com.ort.edu.mvvmexample.data
 
+import com.ort.edu.mvvmexample.core.Config
 import com.ort.edu.mvvmexample.data.database.dao.QuoteDao
 import com.ort.edu.mvvmexample.data.database.entities.QuoteEntity
 import com.ort.edu.mvvmexample.data.model.QuoteModel
 import com.ort.edu.mvvmexample.data.network.QuoteService
+import com.ort.edu.mvvmexample.di.NetworkModule
 import com.ort.edu.mvvmexample.domain.model.Quote
 import com.ort.edu.mvvmexample.domain.model.toDomain
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 
 class QuoteRepository @Inject constructor(

@@ -1,5 +1,37 @@
 <resources>
-    <string name="app_name">Simulacro Parcial</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">PremierRentCard</string>
+    <string name="premier">Premier</string>
+    <string name="rentCard">RentCard</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="marcas">Marcas</string>
+    <string name="nafta">NAFTA</string>
+    <string name="diesel">DIESEL</string>
+    <string name="electrico">ELÉCTRICO</string>
+    <string name="filtro">Filtro >|</string>
+    <string name="navigation_drawer_open">"Abrir"</string>
+    <string name="navigation_drawer_close">"Cerrar"</string>
+    <string name="user_avatar">"Imagen de usuario"</string>
+    <string name="settings_general_header">Generales</string>
+    <string name="settings_notifications_label">Notificaciones</string>
+    <string name="settings_dark_theme_label">Modo Oscuro</string>
+    <string name="forgot">"Olvide la contraseña"</string>
+    <string name="login">"Ingresar"</string>
+    <string name="logo">PremierRentCar</string>
+    <string name="brandLogo">Logo de marca</string>
+    <string name="imageyear">imageYear</string>
+    <string name="carlogoimage">carLogoImage</string>
+    <string name="imagecar">imageCar</string>
+    <string name="imageCarLogo">imageCar</string>
+    <string name="imageCarFuel" />
+    <string name="search">Buscador de vehículos</string>
+    <string name="api_key">LKUvEtqDQEFqVA6S4FmGQA==SfMHb3BgbOalWo0J</string>
+    <string name="base_url">https://api.api-ninjas.com/</string>
 </resources>

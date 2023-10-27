@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import com.ort.edu.mvvmexample.core.Config
 import com.ort.edu.mvvmexample.databinding.ActivityMainBinding
 import com.ort.edu.mvvmexample.di.NetworkModule
+import com.ort.edu.mvvmexample.domain.model.Quote
 import com.ort.edu.mvvmexample.ui.viewmodel.QuoteViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Retrofit
@@ -36,7 +37,6 @@ class MainActivity : AppCompatActivity() {
         })
 
         binding.viewContainer.setOnClickListener { quoteViewModel.randomQuote() }
-
     }
 
 }
