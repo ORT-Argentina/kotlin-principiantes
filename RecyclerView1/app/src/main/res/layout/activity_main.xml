@@ -6,12 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
+    <Button
+        android:id="@+id/ActivityMainBtnMain"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="@string/activity_main_btn_text"
+        app:layout_constraintBottom_toTopOf="@+id/fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ActivityMaintxtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ActivityMainBtnMain"
+        tools:layout_editor_absoluteY="13dp" />
+
     <androidx.fragment.app.FragmentContainerView
+
         android:id="@+id/fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,4 +39,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/navgraph" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

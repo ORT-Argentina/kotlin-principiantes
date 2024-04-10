@@ -13,6 +13,7 @@ class Contacto(nombre: String?, edad: Int?, curso: String?, urlImage: String?): 
 
     var urlImage: String = ""
 
+
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readInt(),

@@ -1,5 +1,6 @@
 package com.manadigital.recyclerview1.fragments
 
+import android.util.Log
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,7 +18,7 @@ import com.manadigital.recyclerview1.listener.OnViewItemClickedListener
 
 class listFragment : Fragment(), OnViewItemClickedListener {
 
-    lateinit var v: View
+    lateinit var vista: View
 
     lateinit var recContactos : RecyclerView
 
@@ -36,19 +37,21 @@ class listFragment : Fragment(), OnViewItemClickedListener {
         savedInstanceState: Bundle?
     ): View? {
 
-        v =  inflater.inflate(R.layout.list_fragment, container, false)
+        vista =  inflater.inflate(R.layout.list_fragment, container, false)
 
+        recContactos = vista.findViewById(R.id.rec_contactos)
 
-        recContactos = v.findViewById(R.id.rec_contactos)
+        Log.d("ListFragment", "onCreateView")
 
-        return v
+        return vista
     }
+
 
     override fun onStart() {
         super.onStart()
-
+        Log.d("ListFragment", "onResume")
         //Creo la Lista Dinamica
-            for (i in 1..10) {
+            for (i in 1..100) {
             contactos.add(Contacto("Pedro",26, Contacto.Constants.cursoA, ""))
             contactos.add(Contacto("Rodolfo",30, Contacto.Constants.cursoA, ""))
             contactos.add(Contacto("Emilio",28, Contacto.Constants.cursoB, ""))
@@ -68,10 +71,15 @@ class listFragment : Fragment(), OnViewItemClickedListener {
         recContactos.adapter = contactoListAdapter
     }
 
+    override fun onResume() {
+        super.onResume()
+        Log.d("ListFragment", "onResume")
+    }
+
     override fun onViewItemDetail(contacto: Contacto) {
         val action = listFragmentDirections.actionListFragmentToViewItem(contacto)
         this.findNavController().navigate(action)
         //findNavController().navigate(action)
-        Snackbar.make(v,contacto.nombre,Snackbar.LENGTH_SHORT).show()
+        //Snackbar.make(v,contacto.nombre,Snackbar.LENGTH_SHORT).show()
     }
 }

@@ -19,9 +19,6 @@ class ContactoListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactoHolder {
         val view =  LayoutInflater.from(parent.context).inflate(R.layout.item_contactos,parent,false)
-
-        val txtView = view.findViewById<TextView>(R.id.txtCurso)
-        txtView.setText("Curso")
         return (ContactoHolder(view))
     }
 
