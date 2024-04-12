@@ -1,5 +1,10 @@
 buildscript {
     ext.kotlin_version = '1.6.21'
+    ext.gradle_version = '8.3.1'
+
+    ext{
+        retrofitVersion = '2.9.0'
+    }
 
     repositories {
         google()
@@ -7,10 +12,12 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.0.0'
+        classpath "com.android.tools.build:gradle:$gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        //A Mano
+
         def nav_version = '2.5.0'
+
+        //A Mano
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
     }
 }

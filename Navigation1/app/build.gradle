@@ -1,9 +1,6 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
-
 // A Mano
 apply plugin: "androidx.navigation.safeargs.kotlin"
 
@@ -14,7 +11,7 @@ android {
     defaultConfig {
         applicationId "com.manadigital.navigation1"
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -54,4 +51,6 @@ dependencies {
 
     // Jetpack Compose Integration
     implementation "androidx.navigation:navigation-compose:$nav_version"
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
 }
