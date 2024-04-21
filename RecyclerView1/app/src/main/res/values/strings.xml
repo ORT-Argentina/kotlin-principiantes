@@ -3,4 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="activity_main_btn_text">Hola</string>
+    <string name="activity_main_btn_navigate">Navegar</string>
+    <string name="destination_fragment_mensaje_bienvenida">¡Bienvenidos al himalaya!</string>
+    <string name="destination_fragment_mensaje_bienvenida_subtitulo">¿Helado?</string>
 </resources>

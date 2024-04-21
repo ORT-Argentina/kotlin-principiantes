@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_listFragment_to_viewItem"
             app:destination="@id/viewItem" />
+        <action
+            android:id="@+id/action_listFragment_to_destinationFragment"
+            app:destination="@id/destinationFragment" />
     </fragment>
     <fragment
         android:id="@+id/viewItem"
@@ -22,5 +25,17 @@
         <argument
             android:name="contacto"
             app:argType="com.manadigital.recyclerview1.entities.Contacto" />
+        <action
+            android:id="@+id/action_viewItem_to_destinationFragment"
+            app:destination="@id/destinationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationFragment"
+        android:name="com.manadigital.recyclerview1.fragments.DestinationFragment"
+        android:label="fragment_destination"
+        tools:layout="@layout/fragment_destination" >
+        <action
+            android:id="@+id/action_destinationFragment_self"
+            app:destination="@id/destinationFragment" />
     </fragment>
 </navigation>
