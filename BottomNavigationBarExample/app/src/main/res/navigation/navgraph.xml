@@ -6,12 +6,6 @@
     app:startDestination="@id/batman">
 
     <fragment
-        android:id="@+id/batman"
-        android:name="com.adb.bottomnavigationbarexample.fragments.Fragment1"
-        android:label="fragment_1"
-        tools:layout="@layout/fragment_1" />
-
-    <fragment
         android:id="@+id/joker"
         android:name="com.adb.bottomnavigationbarexample.fragments.Fragment2"
         android:label="fragment_2"
@@ -22,4 +16,9 @@
         android:name="com.adb.bottomnavigationbarexample.fragments.Fragment3"
         android:label="fragment_3"
         tools:layout="@layout/fragment_3" />
+    <fragment
+        android:id="@+id/batman"
+        android:name="com.adb.bottomnavigationbarexample.fragments.Fragment1"
+        android:label="fragment_1"
+        tools:layout="@layout/fragment_1" />
 </navigation>
