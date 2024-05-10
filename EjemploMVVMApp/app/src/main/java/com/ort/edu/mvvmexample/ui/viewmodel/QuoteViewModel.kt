@@ -20,6 +20,7 @@ class QuoteViewModel @Inject constructor(
     val isLoading = MutableLiveData<Boolean>()
 
     fun onCreate() {
+
         //Aca creo ese objecto
         viewModelScope.launch {
             isLoading.postValue(true)
@@ -37,6 +38,7 @@ class QuoteViewModel @Inject constructor(
     fun randomQuote() {
         viewModelScope.launch {
             isLoading.postValue(true)
+
             val quote = getRandomQuoteUseCase()
             quote?.let {
                 quoteModel.value = it

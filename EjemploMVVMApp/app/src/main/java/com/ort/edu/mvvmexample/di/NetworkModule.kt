@@ -30,15 +30,16 @@ object NetworkModule {
     @Singleton
     @Provides
     fun provideRetrofit():Retrofit{
-        val apiKey = Config.apiKey
+
         val baseUrl = Config.baseUrl
 
-        client.newBuilder().addNetworkInterceptor(Interceptor { chain ->
+        /*client.newBuilder().addNetworkInterceptor(Interceptor { chain ->
+            //val apiKey = Config.apiKey
             val request = chain.request().newBuilder()
                 .addHeader("X-Api-Key", apiKey)
                 .build()
             chain.proceed(request)
-        })
+        })*/
 
         return Retrofit.Builder()
             .baseUrl(baseUrl)
