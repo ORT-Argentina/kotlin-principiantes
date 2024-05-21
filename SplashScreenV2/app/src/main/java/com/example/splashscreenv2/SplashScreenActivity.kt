@@ -14,11 +14,11 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Handler().postDelayed({
-            val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:911"))
+            //val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:911"))
 
             //Logica Carga Forzada
 
-            //var intent = Intent(this, MainActivity::class.java)
+            var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)

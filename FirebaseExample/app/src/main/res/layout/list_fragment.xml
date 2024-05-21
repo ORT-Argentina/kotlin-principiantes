@@ -7,12 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.ListFragment">
 
-    <TextView
-        android:id="@+id/txtCollection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rec_mascotas"
         android:layout_width="0dp"

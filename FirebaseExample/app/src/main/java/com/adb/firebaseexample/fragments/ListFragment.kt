@@ -6,17 +6,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.adb.firebaseexample.R
 import com.adb.firebaseexample.adapters.MascotaFirestoreRecyclerAdapter
-import com.adb.firebaseexample.entities.Contacto
-import com.adb.firebaseexample.holders.MascotaHolder
 import com.adb.firebaseexample.viewmodels.ListViewModel
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.firestore.FirebaseFirestore
@@ -27,13 +23,12 @@ import com.manadigital.recyclerview1.entities.Mascota
 
 class ListFragment : Fragment() {
 
-    private lateinit var adapter: FirestoreRecyclerAdapter<Mascota, MascotaHolder>
+    //private lateinit var adapter: FirestoreRecyclerAdapter<Mascota, MascotaHolder>
     private lateinit var viewModel: ListViewModel
 
     lateinit var v: View
     lateinit var btnAdd : FloatingActionButton
     lateinit var recMascotas : RecyclerView
-    lateinit var txtCollection : TextView
 
     var mascotaList : MutableList<Mascota> = arrayListOf()
 
@@ -60,7 +55,7 @@ class ListFragment : Fragment() {
         v =  inflater.inflate(R.layout.list_fragment, container, false)
         btnAdd = v.findViewById(R.id.btn_add)
         recMascotas = v.findViewById(R.id.rec_mascotas)
-        txtCollection =  v.findViewById(R.id.txtCollection)
+
         prepareFragment()
 
         return v
@@ -72,9 +67,8 @@ class ListFragment : Fragment() {
 
         btnAdd.setOnClickListener(View.OnClickListener {
             val nuevaMascota = Mascota("Ort",Mascota.Constants.typePerro,"Sabueso",10,"mascotas.com")
-            val contactoNuevo = Contacto("Martin", 10, Contacto.Constants.cursoA, "https://www.google.com/xxxxx.png")
-            db.collection("mascotas").document().set(contactoNuevo)
-            //db.collection("mascotas").document(nuevaMascota.nombre).set(nuevaMascota)
+            db.collection("mascotas").document().set(nuevaMascota)
+            db.collection("mascotas").document(nuevaMascota.nombre).set(nuevaMascota)
         })
     }
 
@@ -150,7 +144,6 @@ class ListFragment : Fragment() {
 
     fun checkRecords(){
 
-        //db.collection("mascotas").document().set(Contacto("Pedro",26, Contacto.Constants.cursoA, ""))
 
         db.collection("mascotas").get()
             .addOnCompleteListener { task ->

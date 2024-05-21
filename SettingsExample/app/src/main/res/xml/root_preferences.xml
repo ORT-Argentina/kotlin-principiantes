@@ -6,9 +6,8 @@
         <SwitchPreference
             android:defaultValue="false"
             android:key="night_mode"
-            android:title="Modo Noche"
-            app:icon="@android:drawable/btn_star_big_on"
-            app:summary="Habilita el modo noche" />
+            android:title="Agrupar rostros similares"
+            app:summary="Visualizar fotos xxxx" />
 
         <EditTextPreference
             app:key="signature_string"
