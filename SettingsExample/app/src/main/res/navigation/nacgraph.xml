@@ -18,5 +18,10 @@
         android:id="@+id/settingsActivity"
         android:name="com.utn.settingsexample.SettingsActivity"
         android:label="SettingsActivity" />
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.utn.settingsexample.Fragments.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" />
 
 </navigation>

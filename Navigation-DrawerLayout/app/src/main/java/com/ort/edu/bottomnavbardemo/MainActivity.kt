@@ -22,7 +22,9 @@ class MainActivity : AppCompatActivity() {
 
         // Busco y guardo la referencia a las vistas en variables
         drawerLayout = findViewById(R.id.drawer_layout)
+        //Menu de La Izquierda
         navigationView = findViewById(R.id.nav_view)
+
         navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
 
         setupDrawerLayout()
@@ -37,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         // Configuro la appbar para que muestre el icono del drawer y actualice el titulo
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
 
+
         // Listener para cuando se realiza la navegacion
         navController.addOnDestinationChangedListener { _, _, _ ->
             // Aca le digo que quiero que mi icono izquierdo de la appbar sea el del drawer
@@ -46,9 +49,10 @@ class MainActivity : AppCompatActivity() {
 
 
     // Habilita la navegación desde la appbar con el drawer. Deja
-//    override fun onSupportNavigateUp(): Boolean {
-//        return NavigationUI.navigateUp(navHostFragment.navController, drawerLayout)
-//    }
+    /*override fun onSupportNavigateUp(): Boolean {
+        return NavigationUI.navigateUp(navHostFragment.navController, drawerLayout)
+    }*/
+
 
     // Forzar el drawer a que se abra siempre
     override fun onSupportNavigateUp(): Boolean {

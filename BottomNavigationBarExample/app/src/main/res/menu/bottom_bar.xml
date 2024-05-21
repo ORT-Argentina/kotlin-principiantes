@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+        <item android:title="Item" />
+        <group >
+                <item
+                    android:id="@+id/penguin"
+                    android:icon="@drawable/iconpenguin"
+                    android:title="Penguen" />
+                <item
+                    android:id="@+id/penguin"
+                    android:icon="@drawable/iconpenguin"
+                    android:title="Penguen" />
+                <item
+                    android:id="@+id/penguin"
+                    android:icon="@drawable/iconpenguin"
+                    android:title="Penguen" />
+        </group>
         <item
             android:id="@+id/batman"
             android:icon="@drawable/iconbatman"
@@ -11,9 +26,6 @@
             android:icon="@drawable/iconjoker"
             android:title="Joker"
             />
-        <item
-            android:id="@+id/penguin"
-            android:icon="@drawable/iconpenguin"
-            android:title="Penguen" />
+
 
 </menu>

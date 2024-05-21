@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        test = findViewById(R.id.ActivityMainBtnMain)
+        //test = findViewById(R.id.ActivityMainBtnMain)
 
         test.setOnClickListener(){
             Snackbar.make(it, "Hola 1", Snackbar.LENGTH_SHORT).show()

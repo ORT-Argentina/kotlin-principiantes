@@ -24,6 +24,7 @@ class BlankFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        requireActivity().setTitle("Blank Fragment")
         //requireActivity().invalidateOptionsMenu()
 
         return inflater.inflate(R.layout.fragment_blank, container, false)
