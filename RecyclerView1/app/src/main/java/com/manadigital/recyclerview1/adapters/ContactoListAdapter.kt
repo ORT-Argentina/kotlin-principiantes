@@ -32,7 +32,6 @@ class ContactoListAdapter(
 
         holder.getCardLayout().setOnClickListener{
             onItemClick.onViewItemDetail(contact)
-
         }
     }
 

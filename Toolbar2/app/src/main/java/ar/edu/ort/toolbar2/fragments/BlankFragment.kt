@@ -38,8 +38,8 @@ class BlankFragment : Fragment() {
 
         vista.findViewById<Button>(R.id.btnNavFrag2).setOnClickListener{
 
-            /*val action = BlankFragment2Directions.actionBlankFragment2ToBlankFragment()*/
-            vista.findNavController().navigate(R.id.action_blankFragment_to_blankFragment22)
+            val action = BlankFragment2Directions.actionBlankFragment2ToBlankFragment()
+            vista.findNavController().navigate(R.id.action_blankFragment_to_blankFragment2)
 
         }
 

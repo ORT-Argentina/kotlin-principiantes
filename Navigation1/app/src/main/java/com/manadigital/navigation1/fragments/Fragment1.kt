@@ -42,7 +42,7 @@ class Fragment1 : Fragment() {
         btnGoToFragment2.setOnClickListener{
 
             //val action2 = Fragment1Directions.actionFragment1ToFragment2(contact)
-            view1.findNavController().navigate(action2)
+            //view1.findNavController().navigate(action2)
         }
 
         txtInput = view1.findViewById(R.id.txtInput)

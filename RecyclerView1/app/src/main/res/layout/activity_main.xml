@@ -6,6 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
+    <Button
+        android:id="@+id/ActivityMainBtnMain"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="@string/activity_main_btn_text"
+        app:layout_constraintBottom_toTopOf="@+id/fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ActivityMaintxtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ActivityMainBtnMain"
+        tools:layout_editor_absoluteY="13dp" />
+
     <androidx.fragment.app.FragmentContainerView
 
         android:id="@+id/fragment"
