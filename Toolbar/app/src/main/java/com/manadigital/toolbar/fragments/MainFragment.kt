@@ -24,6 +24,8 @@ class MainFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
+
+
         v =  inflater.inflate(R.layout.fragment_main, container, false)
         btnNavigate = v.findViewById(R.id.btnNavigate)
 
@@ -40,6 +42,11 @@ class MainFragment : Fragment() {
             v.findNavController().navigate(action)
         }
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        requireActivity().setTitle("Main Fragment")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

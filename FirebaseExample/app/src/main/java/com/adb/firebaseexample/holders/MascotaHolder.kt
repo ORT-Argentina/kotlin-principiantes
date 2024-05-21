@@ -20,7 +20,6 @@ class MascotaHolder (v: View) : RecyclerView.ViewHolder(v) {
     }
 
     fun getCardLayout(): CardView {
-
         return view.findViewById(R.id.card_package_item)
     }
 }
