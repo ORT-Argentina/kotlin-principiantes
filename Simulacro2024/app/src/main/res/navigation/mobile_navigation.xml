@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_intro">
+
+    <fragment
+        android:id="@+id/navigation_intro"
+        android:name="com.example.simulacros.ui.intro.IntroFragment"
+        android:label="@string/title_intro"
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_navigation_intro_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_intro"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.simulacros.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_detailFragment3"
+            app:destination="@id/navitagion_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="com.example.simulacros.ui.dashboard.DashboardFragment"
+        android:label="@string/title_favorites"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.simulacros.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_publishing"
+        android:name="com.example.simulacros.ui.publishing.PublishingFragment"
+        android:label="@string/title_person"
+        tools:layout="@layout/fragment_publishing" />
+
+    <fragment
+        android:id="@+id/navitagion_detail"
+        android:name="com.example.simulacros.ui.detail.DetailFragment"
+        android:label="@string/title_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="dog"
+            app:argType="com.example.simulacros.domain.model.Dog" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_preference"
+        android:name="com.example.simulacros.ui.preference.PreferenceFragment"
+        android:label="@string/title_setting"
+        tools:layout="@layout/fragment_preference" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.simulacros.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

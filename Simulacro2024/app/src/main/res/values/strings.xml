@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Simulacro 2024</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorites">Favoritos</string>
+    <string name="title_chat">Adopción</string>
+    <string name="title_person">Publicación</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Perfil</string>
+    <string name="title_setting">Configuración</string>
+    <string name="title_detail">Info Detalle</string>
+    <string name="title_intro">Intro</string>
+    <string name="preference_category">General</string>
+    <string name="preference_night_mode">Modo Oscuro</string>
+    <string name="preference_night_mode_key">night_mode_preference</string>
+    <string name="close_app">Cerrar App</string>
+    <string name="copyright">Martín</string>
+    <string name="dogs_api_base_url">https://dog.ceo/</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
