@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:title="@string/title_setting">
+
+    <PreferenceCategory
+        android:title="@string/preference_category">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="night_mode_preference"
+            app:summary="Cambiar entre el modo claro y el modo oscuro"
+            android:title="@string/preference_night_mode" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
