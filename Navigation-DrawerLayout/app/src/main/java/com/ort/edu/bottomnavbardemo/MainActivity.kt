@@ -38,10 +38,10 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
 
         // Listener para cuando se realiza la navegacion
-        navController.addOnDestinationChangedListener { _, _, _ ->
+        /*navController.addOnDestinationChangedListener { _, _, _ ->
             // Aca le digo que quiero que mi icono izquierdo de la appbar sea el del drawer
             supportActionBar?.setHomeAsUpIndicator(R.drawable.hamburger)
-        }
+        }*/
     }
 
 

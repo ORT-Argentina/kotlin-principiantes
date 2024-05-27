@@ -8,9 +8,9 @@
     tools:context=".fragments.WolverineFragment">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/ivWolverine"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/wolverine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

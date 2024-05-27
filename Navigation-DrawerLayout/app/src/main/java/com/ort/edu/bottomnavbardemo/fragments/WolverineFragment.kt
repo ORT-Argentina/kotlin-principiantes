@@ -38,6 +38,11 @@ class WolverineFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_wolverine, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+        requireActivity().actionBar?.setDisplayShowHomeEnabled(false)
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of
