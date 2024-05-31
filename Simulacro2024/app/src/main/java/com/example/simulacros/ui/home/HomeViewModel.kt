@@ -28,7 +28,7 @@ class HomeViewModel @Inject constructor(
         addDogsToList()
     }
 
-    fun addDogsToList() {
+    private fun addDogsToList() {
         CoroutineScope(Dispatchers.Main).launch {
             isLoading.postValue(true)
 
